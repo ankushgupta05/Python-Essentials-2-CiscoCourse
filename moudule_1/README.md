@@ -79,7 +79,8 @@ The following table summarizes important exponentiation and logarithmic function
 
 Make sure to import the `math` module before using these functions (except `pow()`, which is built-in):
 
-```python
+```
+python
 import math
 
 # Example Usage:
