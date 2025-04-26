@@ -190,7 +190,7 @@ for i in range(5):
 | Random Numbers | Different every run | Same every run |
 | Use Case | Normal randomness | Testing, debugging |
 
-## IMG Programe
+## IMG Programe of random
 ```
 1)// without seed
 from random import random
@@ -244,4 +244,30 @@ for i in range(4):
 0.7579544029403025
 0.420571580830845
 0.25891675029296335
+
+
+4)
+from random import randrange, randint
+
+print('randrange(1) : ',randrange(1))
+print('randrange(0, 1) : ',randrange(0, 1))
+print('randrange(0, 1, 1): ',randrange(0, 1, 1))
+print(randint(0, 1))
+print()
+print('randrange(2) : ',randrange(2))
+print('randrange(0, 2) : ',randrange(0, 2))
+print('randrange(0, 2, 1): ',randrange(0, 2, 1))
+print(randint(0, 2))
+print()
+
+// output
+randrange(1) :  0
+randrange(0, 1) :  0
+randrange(0, 1, 1):  0
+1
+
+randrange(2) :  0
+randrange(0, 2) :  1
+randrange(0, 2, 1):  0
+0
 ```
