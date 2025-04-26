@@ -443,3 +443,40 @@ Feel free to run these codes on your machine to see different outputs depending 
 
 
 
+## module 1.2 quize
+# Python - Questions 1 to 4
+
+This file contains the **Questions 1 to 4** with corresponding **code**, **answers**, and **explanations** in table format.
+
+---
+
+## Questions, Code, Answers, and Explanations
+
+| Question | Code | Answer | Explanation |
+|:--------:|:----:|:------:|:-----------:|
+| **1** | ```python
+import math
+result = math.e == math.exp(1)
+print(result)
+``` | `True` | `math.e` is the mathematical constant **e (~2.71828)** and `math.exp(1)` calculates **e^1**, which is also **e**. So, both are equal, and `result` becomes `True`. |
+| **2** | _No code required._ | _... the pseudo-random values emitted from the random module will be exactly the same._ | Setting a random number generator's **seed** to the same value ensures that the sequence of random numbers generated will always be **identical** every time the program is run. |
+| **3** | ```python
+from platform import processor
+print(processor())
+``` | `processor()` | To determine the **CPU name**, use the `processor()` function from the `platform` module. It returns a string showing the real processor name (e.g., Intel, ARM, etc.). |
+| **4** | ```python
+import platform
+print(len(platform.python_version_tuple()))
+``` | `3` | `platform.python_version_tuple()` returns a tuple of 3 elements: **(major, minor, patch)** parts of the Python version. So, `len()` of this tuple is **3**. |
+
+---
+
+## Notes
+- Make sure the `platform` and `math` modules are correctly imported.
+- Random seeds are especially useful for reproducibility in testing and simulations.
+
+---
+
+# Happy Learning! 🚀
+
+
