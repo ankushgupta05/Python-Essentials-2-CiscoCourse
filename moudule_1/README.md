@@ -48,3 +48,61 @@ print(math.sin(x))      # Output: 1.0
 x = math.pi/2
 print(math.degrees(x))  # Output: 90.0
 
+
+
+
+
+
+
+
+# Exponentiation and Logarithmic Functions in Python (`math` Module)
+
+The following table summarizes important exponentiation and logarithmic functions available in Python's `math` module:
+
+---
+
+## Functions Table
+
+| Function | Description | Example Usage | Output |
+|:--------:|:------------:|:-------------:|:------:|
+| `e` | Constant value of Euler's number | `math.e` | `2.718281828459045` |
+| `exp(x)` | Returns the value of e raised to the power x (eˣ) | `x = 2`<br>`math.exp(x)` | `7.38905609893065` |
+| `log(x)` | Returns the natural logarithm (base e) of x | `x = math.e`<br>`math.log(x)` | `1.0` |
+| `log(x, b)` | Returns the logarithm of x to base b | `x = 8, b = 2`<br>`math.log(x, b)` | `3.0` |
+| `log10(x)` | Returns the base-10 logarithm of x | `x = 1000`<br>`math.log10(x)` | `3.0` |
+| `log2(x)` | Returns the base-2 logarithm of x | `x = 8`<br>`math.log2(x)` | `3.0` |
+| `pow(x, y)` | Returns the value of x raised to the power y (xʸ) | `x = 2, y = 3`<br>`pow(x, y)` | `8` |
+
+---
+
+## How to Use
+
+Make sure to import the `math` module before using these functions (except `pow()`, which is built-in):
+
+```python
+import math
+
+# Example Usage:
+
+x = 2
+print(math.exp(x))        # Output: 7.38905609893065
+
+x = math.e
+print(math.log(x))        # Output: 1.0
+
+x = 8
+b = 2
+print(math.log(x, b))     # Output: 3.0
+
+x = 1000
+print(math.log10(x))      # Output: 3.0
+
+x = 8
+print(math.log2(x))       # Output: 3.0
+
+# pow() does not require math module
+x = 2
+y = 3
+print(pow(x, y))          # Output: 8
+
+
