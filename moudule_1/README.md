@@ -37,7 +37,7 @@ The following table summarizes important trigonometric functions and constants a
 
 Make sure to import the `math` module before using these functions:
 
-```python
+python
 import math
 
 # Example Usage:
@@ -59,7 +59,6 @@ print(math.degrees(x))  # Output: 90.0
 
 The following table summarizes important exponentiation and logarithmic functions available in Python's `math` module:
 
----
 
 ## Functions Table
 
@@ -73,13 +72,11 @@ The following table summarizes important exponentiation and logarithmic function
 | `log2(x)` | Returns the base-2 logarithm of x | `x = 8`<br>`math.log2(x)` | `3.0` |
 | `pow(x, y)` | Returns the value of x raised to the power y (xʸ) | `x = 2, y = 3`<br>`pow(x, y)` | `8` |
 
----
 
 ## How to Use
 
 Make sure to import the `math` module before using these functions (except `pow()`, which is built-in):
 
-```
 python
 import math
 
