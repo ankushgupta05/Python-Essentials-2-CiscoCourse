@@ -306,3 +306,18 @@ print(sample(my_list, 10))
 
 
 
+##  Important Functions and Their Use
+Function | Purpose | Example | Example Output
+platform() | Full info about OS + Hardware | platform() | Windows-10-10.0.22631-SP0
+platform(aliased=True) | Alternative OS name | platform(1) | Windows-10-10.0.22631-SP0
+platform(terse=True) | Short version info | platform(0, 1) | Windows-10
+machine() | Hardware/Processor type | machine() | x86_64
+processor() | Real Processor Name | processor() | Intel64 Family 6 Model 142
+system() | OS Name | system() | Windows
+version() | OS Version | version() | 10.0.22631
+python_implementation() | Python implementation used | python_implementation() | CPython
+python_version_tuple() | Python version split into parts | python_version_tuple() | ('3', '12', '2')
+
+
+
+
