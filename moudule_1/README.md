@@ -104,3 +104,63 @@ y = 3
 print(pow(x, y))          # Output: 8
 
 
+
+
+
+
+
+
+
+
+
+## Imp Programe
+```
+from math import ceil, floor, trunc
+
+x = 1.4
+y = 2.6
+
+print(floor(x), floor(y))
+print(floor(-x), floor(-y))
+print(ceil(x), ceil(y))
+print(ceil(-x), ceil(-y))
+print(trunc(x), trunc(y))
+print(trunc(-x), trunc(-y))
+    
+```
+
+
+
+# Rounding Functions in Python (`math` Module)
+
+Python’s `math` module provides functions like `floor()`, `ceil()`, and `trunc()` to **round** floating-point numbers in different ways.
+
+---
+
+## Functions Table
+
+| Function | Description | Example Usage | Output |
+|:--------:|:------------:|:-------------:|:------:|
+| `floor(x)` | Returns the largest integer less than or equal to x | `floor(1.4)` → `1`<br>`floor(2.6)` → `2`<br>`floor(-1.4)` → `-2`<br>`floor(-2.6)` → `-3` |
+| `ceil(x)` | Returns the smallest integer greater than or equal to x | `ceil(1.4)` → `2`<br>`ceil(2.6)` → `3`<br>`ceil(-1.4)` → `-1`<br>`ceil(-2.6)` → `-2` |
+| `trunc(x)` | Truncates (removes) the decimal part of x, keeping only the integer part | `trunc(1.4)` → `1`<br>`trunc(2.6)` → `2`<br>`trunc(-1.4)` → `-1`<br>`trunc(-2.6)` → `-2` |
+
+---
+
+## Code Example
+
+```python
+from math import ceil, floor, trunc
+
+x = 1.4
+y = 2.6
+
+print(floor(x), floor(y))   # Output: 1 2
+print(floor(-x), floor(-y)) # Output: -2 -3
+print(ceil(x), ceil(y))     # Output: 2 3
+print(ceil(-x), ceil(-y))   # Output: -1 -2
+print(trunc(x), trunc(y))   # Output: 1 2
+print(trunc(-x), trunc(-y)) # Output: -1 -2
+
+
+
