@@ -183,20 +183,6 @@ for i in range(5):
 
 # 🎯 Random Numbers in Python (`random` Module)
 
-The `random` module in Python is used to generate random numbers.  
-Here’s the full table:
-
----
-
-## 🧩 Full Table (Code + Output + Behavior + Explanation)
-
-| Program Type | Code | Output | Behavior | Explanation |
-|:------------:|:----:|:------:|:--------:|:-----------:|
-| Without `seed()` | ```python from random import random for i in range(5): print(random()) ``` | (Different values each time, e.g.)<br>0.13436424411240122<br>0.8474337369372327<br>0.763774618976614<br>0.2550690257394217<br>0.49543508709194095 | Different on every run | No seed is set, so random sequence changes every time. |
-| With `seed(0)` | ```python from random import random, seed seed(0) for i in range(5): print(random()) ``` | (Always same output)<br>0.8444218515250481<br>0.7579544029403025<br>0.420571580830845<br>0.25891675029296335<br>0.5112747213686085 | Same on every run | Setting a seed (`seed(0)`) fixes the random sequence for reproducibility. |
-
----
-
 # 📚 Conclusion
 
 | Feature | Without `seed()` | With `seed(0)` |
@@ -204,4 +190,58 @@ Here’s the full table:
 | Random Numbers | Different every run | Same every run |
 | Use Case | Normal randomness | Testing, debugging |
 
----
+## IMG Programe
+```
+1)// without seed
+from random import random
+
+for i in range(5):
+    print(random())
+
+print('\n\n')    
+    
+for i in range(5):
+    print(random())
+    
+    
+// output
+0.8444218515250481
+0.7579544029403025
+0.420571580830845
+0.25891675029296335
+
+
+0.8444218515250481
+0.7579544029403025
+0.420571580830845
+0.25891675029296335
+
+
+
+
+2)
+from random import random, seed
+
+seed(0)
+
+for i in range(4):
+    print(random())
+print('\n\n')
+
+seed(0)  # Resetting the seed for the second loop
+for i in range(4):
+    print(random())
+
+//output
+0.8444218515250481
+0.7579544029403025
+0.420571580830845
+0.25891675029296335
+
+
+
+0.8444218515250481
+0.7579544029403025
+0.420571580830845
+0.25891675029296335
+```
