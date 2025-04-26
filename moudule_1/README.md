@@ -149,7 +149,8 @@ Python’s `math` module provides functions like `floor()`, `ceil()`, and `trunc
 
 ## Code Example
 
-```python
+```
+python
 from math import ceil, floor, trunc
 
 x = 1.4
@@ -161,6 +162,22 @@ print(ceil(x), ceil(y))     # Output: 2 3
 print(ceil(-x), ceil(-y))   # Output: -1 -2
 print(trunc(x), trunc(y))   # Output: 1 2
 print(trunc(-x), trunc(-y)) # Output: -1 -2
+```
 
 
+## Random module
+```
+1)
+from random import random
+
+for i in range(5):
+    print(random())
+
+// output
+0.2973757839075416
+0.25461655339320555
+0.358163969849571
+0.7937167851915783
+0.5019736325451979
+```
 
