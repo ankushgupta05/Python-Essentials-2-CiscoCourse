@@ -285,4 +285,24 @@ for i in range(10):
 ```
 
 
+## imp programe of choice and sample
+```
+1)
+from random import choice, sample
+
+my_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+print(choice(my_list))
+print(sample(my_list, 5))
+print(sample(my_list, 10))
+
+
+// output
+7
+[10, 7, 5, 4, 9]
+[10, 4, 2, 3, 9, 6, 5, 1, 7, 8]
+```
+
+
+
 
