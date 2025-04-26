@@ -181,3 +181,31 @@ for i in range(5):
 0.5019736325451979
 ```
 
+
+
+
+# 🎯 Random Numbers in Python (`random` Module)
+
+The `random` module in Python is used to generate random numbers.  
+Here’s the full table:
+
+---
+
+## 🧩 Full Table (Code + Output Behavior + Explanation)
+
+| Program Type | Code | Output Behavior | Explanation |
+|:------------:|:----:|:----------------:|:-----------:|
+| Without `seed()` | ```python from random import random for i in range(5): print(random()) ``` | Different numbers every time | No seed is set, so the random sequence changes on every run. |
+| With `seed(0)` | ```python from random import random, seed seed(0) for i in range(5): print(random()) ``` | Same numbers every time | Setting a seed (`seed(0)`) fixes the random sequence, so the same numbers are generated every time you run. |
+
+---
+
+# 📚 Conclusion
+
+| Feature | Without `seed()` | With `seed(0)` |
+|:-------:|:----------------:|:--------------:|
+| Random Numbers | Different every run | Same every run |
+| Use Case | Normal randomness | Testing, debugging |
+
+---
+
