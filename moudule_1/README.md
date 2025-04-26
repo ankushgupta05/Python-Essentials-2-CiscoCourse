@@ -270,4 +270,19 @@ randrange(2) :  0
 randrange(0, 2) :  1
 randrange(0, 2, 1):  0
 0
+
+
+
+
+5)
+from random import randint
+
+for i in range(10):
+    print(randint(1, 10), end=',')
+
+// output
+7,8,2,7,5,2,7,9,6,9,
 ```
+
+
+
