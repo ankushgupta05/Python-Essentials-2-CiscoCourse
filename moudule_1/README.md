@@ -471,12 +471,22 @@ print(len(platform.python_version_tuple()))
 
 ---
 
-## Notes
+### Notes
 - Make sure the `platform` and `math` modules are correctly imported.
 - Random seeds are especially useful for reproducibility in testing and simulations.
 
 ---
 
-# Happy Learning! 🚀
 
 
+## Packages
+```
+1)
+if __name__ == "__main__":
+   print("I prefer to be a module.")
+else:
+   print("I like to be a module.")
+
+// output
+I prefer to be a module.
+```
