@@ -790,3 +790,17 @@ Genrate ValueError
 | **Question 3:** What is the expected result of the following code? <br> s1 = '12.8' <br> i = int(s1) <br> s2 = str(i) <br> f = float(s2) <br> print(s1 == s2) | `s1 = '12.8'` <br> `i = int(s1)` <br> `s2 = str(i)` <br> `f = float(s2)` <br> `print(s1 == s2)` | The code raises a ValueError exception | The `int()` function cannot convert a string with a decimal point ('12.8') into an integer, leading to a ValueError. |
 
 
+
+## img prog.
+```
+print(10)
+print(ord('1'))
+print(ord('a'))
+print('A')
+
+//o/p
+10
+49
+97
+A
+```
