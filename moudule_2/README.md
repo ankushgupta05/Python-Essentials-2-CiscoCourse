@@ -145,3 +145,45 @@ The output of alpha[::2] will be:
 | No Append Method                | Strings do not have an `append()` method to add characters to them.           | `alphabet = "abcdefghijklmnopqrstuvwxyz"`<br>`alphabet.append("A")`        | Error: `AttributeError`  |
 | No Insert Method                | Strings do not have an `insert()` method to insert characters at specific positions. | `alphabet = "abcdefghijklmnopqrstuvwxyz"`<br>`alphabet.insert(0, "A")`   | Error: `AttributeError`  |
 | Modifying Strings               | Since strings are immutable, you need to create a new string if modifications are needed. | `alphabet = "abcdefghijklmnopqrstuvwxyz"`<br>`alphabet = "A" + alphabet`  | `Aabcdefghijklmnopqrstuvwxyz` |
+
+
+
+
+
+
+
+
+
+
+### img prog.
+```
+1)
+# Demonstrating min() - Example 1:
+print(min("aAbByYzZ"))
+
+
+# Demonstrating min() - Examples 2 & 3:
+t = 'The Knights Who Say "Ni!"'
+print('[' + min(t) + ']')
+
+t = [0, 1, 2]
+print(min(t))
+print()
+print(ord('a'))
+print(ord('A'))
+print(ord(' '))
+
+
+//output
+A
+[ ]
+0
+
+97
+65
+32
+```
+
+
+
+
