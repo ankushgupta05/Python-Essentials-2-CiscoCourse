@@ -804,3 +804,64 @@ print('A')
 97
 A
 ```
+
+
+## imp exception
+```
+
+1)
+def bad_fun(n):
+    raise ZeroDivisionError  # This raises a specific error.
+
+try:
+    bad_fun(0)  # This calls the function where ZeroDivisionError is raised.
+except ArithmeticError:  # This will catch any error that is a type of ArithmeticError.
+    print("What happened? An error?")
+
+print("THE END.")
+
+
+//o/p
+What happened? An error?
+THE END.
+
+//Note:-
+The ZeroDivisionError is caught by the except ArithmeticError: block because ZeroDivisionError is a subclass of ArithmeticError. In Python, when an exception is raised, the catching block can catch that error if the error type matches, or if it's a subclass of the type specified in the except block.
+
+
+
+2)
+def bad_fun(n):
+    try:
+        return n / 0
+    except:
+        print("I did it again!")
+        raise
+
+
+try:
+    bad_fun(0)
+except ArithmeticError:
+    print("I see!")
+
+print("THE END.")
+
+//o/p
+I did it again!
+I see!
+THE END.
+
+
+
+//Note Airthmatic and ZeroDivision  both error similar
+
+```
+
+
+| **Code/Action**                               | **Explanation**                                                                                                                                                                | **Example 1 (Valid Input)**                  | **Example 2 (Invalid Input)**              |
+|-----------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------|--------------------------------------------|
+| `x = float(input("Enter a number: "))`        | Takes user input, converts it into a floating-point number.                                                                                                                     | Input: `9`                                 | Input: `-9`                                |
+| `assert x >= 0.0`                             | Asserts that the input number must be non-negative. If the condition is `False`, an `AssertionError` is raised.                                                                | `x = 9` (Condition is True)                | `x = -9` (Condition is False)              |
+| `x = math.sqrt(x)`                           | Calculates the square root of `x` if the assertion is passed.                                                                                                                   | `math.sqrt(9)` → `3.0`                     | (Does not execute due to AssertionError)   |
+| `print(x)`                                    | Prints the square root of `x`.                                                                                                                                                  | Output: `3.0`                              | No output due to the error.               |
+| **Outcome**                                   | If the assertion is true, the program continues and prints the square root of the number. If the assertion fails, an `AssertionError` occurs, stopping the program.           | No error. The program prints `3.0`.         | AssertionError raised, program stops.     |
