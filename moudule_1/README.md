@@ -492,7 +492,6 @@ I prefer to be a module.
 ```
 
 
-
 # Prevent Running Module Code as Script
 
 | Question No. | Question                                                                                     | Answer                                                                                                                                                           |
@@ -504,6 +503,10 @@ I prefer to be a module.
 ## Explanation
 
 ### Question 1
+
+**Q:** You want to prevent your module's user from running your code as an ordinary script. How will you achieve such an effect?
+
+**A:**
 In Python, every module has a built-in variable called `__name__`.
 - If a module is being run directly (e.g., `python module.py`), `__name__` is set to `'__main__'`.
 - If the module is being imported into another module, `__name__` will be set to the module's name.
@@ -531,7 +534,13 @@ if __name__ == "__main__":
 
 This ensures that important parts of your code don't unintentionally execute when someone imports your module.
 
+---
+
 ### Question 2
+
+**Q:** Some additional and necessary packages are stored inside the `D:\\Python\\Project\\Modules` directory. Write a code ensuring that the directory is traversed by Python in order to find all requested modules.
+
+**A:**
 Sometimes, you may have custom or additional modules stored in a specific directory. To make Python aware of this directory for importing modules, you can modify the system path at runtime using the `sys` module.
 
 Example:
@@ -550,15 +559,20 @@ sys.path.append("D:\\Python\\Project\\Modules")
 
 This technique is useful for dynamically managing where Python looks for modules at runtime.
 
+---
+
 ### Question 3
-Assuming that `D:\\Python\\Project\\Modules` is already appended to `sys.path`, and the directory structure is:
+
+**Q:** The directory mentioned in the previous exercise contains a sub-tree of the following structure:
 
 ```
 abc
  |__ def
      |__ mymodule.py
 ```
+Assuming that `D:\\Python\\Project\\Modules` has been successfully appended to the `sys.path` list, write an import directive letting you use all the `mymodule` entities.
 
+**A:**
 You can import `mymodule` using:
 
 ```python
@@ -570,3 +584,4 @@ import abc.def.mymodule
 
 This import method allows structured and organized module access.
 
+---
