@@ -692,6 +692,54 @@ String comparisons in Python are lexicographical, meaning they are compared char
 
 
 
+## img prog
+```
+1)
+print('10' == 10) # TRUE
+print('10' != 10) # FALSE 
+print('10' == 1)  # FALSE
+print('10' != 1)  # TRUE
+print('10' > 10)  # genrate error
+
+
+
+2)
+# Demonstrating the sorted() function:
+first_greek = ['omega', 'alpha', 'pi', 'gamma']
+first_greek_2 = sorted(first_greek)
+
+print(first_greek)
+print(first_greek_2)
+
+print()
+
+//o/p
+['omega', 'alpha', 'pi', 'gamma']
+['alpha', 'gamma', 'omega', 'pi']
+
+
+3)
+# Demonstrating the sort() method:
+second_greek = ['omega', 'alpha', 'pi', 'gamma']
+print(second_greek)
+
+second_greek.sort()
+print(second_greek)
+
+//o/p
+['omega', 'alpha', 'pi', 'gamma']
+['alpha', 'gamma', 'omega', 'pi']
+
+4)
+s1 = 'Where are the snows of yesteryear?'
+s2 = s1.split()
+print(s2)
+
+//0/p
+['Where', 'are', 'the', 'snows', 'of', 'yesteryear?']
+```
+
+
 
 
 
