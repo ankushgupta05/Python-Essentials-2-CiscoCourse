@@ -808,6 +808,34 @@ A
 
 ## imp exception
 ```
+1)
+try:
+    print(1/0)
+except ZeroDivisionError:
+    print("zero")
+except ArithmeticError:
+    print("arith")
+except:
+    print("some")
+
+//o/p
+zero
+
+
+2)
+try:
+    print(1/0)
+except ArithmeticError:
+    print("arith")
+except ZeroDivisionError:
+    print("zero")
+except:
+    print("some")
+
+//o/p
+airth
+
+
 
 1)
 def bad_fun(n):
