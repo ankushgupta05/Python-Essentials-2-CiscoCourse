@@ -361,7 +361,7 @@ print('kappa'.find('a', 2, 4))
 ```
 
 
-# Demonstrating the `isalnum()` method
+# Demonstrating the `isalnum()` method and isalnum allows string and number
 
 | Expression | Result | Explanation |
 |:-----------|:-------|:------------|
@@ -374,3 +374,19 @@ print('kappa'.find('a', 2, 4))
 
 ---
 
+
+## img programe
+```
+t = 'Six lambdas'
+print(t.isalnum())
+
+t = '&Alpha;&beta;&Gamma;&delta;'
+print(t.isalnum())
+
+t = '20E1'
+print(t.isalnum())
+//o/p
+False
+False
+True
+```
