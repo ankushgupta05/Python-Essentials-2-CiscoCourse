@@ -855,6 +855,19 @@ THE END.
 
 //Note Airthmatic and ZeroDivision  both error similar
 
+
+3)
+
+import math
+
+x = float(input("Enter a number: "))
+assert x >= 0.0
+
+x = math.sqrt(x)
+
+print(x)
+//o/p
+below written anwser
 ```
 
 
