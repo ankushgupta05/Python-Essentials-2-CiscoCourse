@@ -490,3 +490,83 @@ else:
 // output
 I prefer to be a module.
 ```
+
+
+
+# Prevent Running Module Code as Script
+
+| Question No. | Question                                                                                     | Answer                                                                                                                                                           |
+|--------------|----------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1            | You want to prevent your module's user from running your code as an ordinary script. How will you achieve such an effect? | Use the `if __name__ == "__main__":` block to ensure the code only runs when the file is executed directly, not when imported as a module. |
+| 2            | Some additional and necessary packages are stored inside the D:\\Python\\Project\\Modules directory. Write a code ensuring that the directory is traversed by Python in order to find all requested modules. | Use `sys.path.append("D:\\Python\\Project\\Modules")` to add the directory to Python's module search path. |
+| 3            | The directory mentioned in the previous exercise contains a sub-tree with abc/def/mymodule.py. Write an import directive letting you use all the mymodule entities. | Use `import abc.def.mymodule` to import and access all entities from `mymodule`. |
+
+## Explanation
+
+### Question 1
+In Python, every module has a built-in variable called `__name__`.
+- If a module is being run directly (e.g., `python module.py`), `__name__` is set to `'__main__'`.
+- If the module is being imported into another module, `__name__` will be set to the module's name.
+
+You can use this behavior to control the execution of code. Example:
+
+```python
+# my_module.py
+
+def important_function():
+    print("Important function is running.")
+
+if __name__ == "__main__":
+    # This code runs only when the script is executed directly
+    print("Running directly")
+    important_function()
+```
+
+- When you **run `my_module.py` directly**, it will print:
+  ```
+  Running directly
+  Important function is running.
+  ```
+- When you **import `my_module` into another file**, nothing will be printed automatically.
+
+This ensures that important parts of your code don't unintentionally execute when someone imports your module.
+
+### Question 2
+Sometimes, you may have custom or additional modules stored in a specific directory. To make Python aware of this directory for importing modules, you can modify the system path at runtime using the `sys` module.
+
+Example:
+
+```python
+import sys
+
+# Add the custom modules directory to the Python path
+# Note the double backslashes (\\) to avoid escape character issues
+sys.path.append("D:\\Python\\Project\\Modules")
+```
+
+- `sys.path` is a list of strings that specifies the search paths for modules.
+- Using `sys.path.append()` adds your specified directory to the end of the search path.
+- Now, Python will look inside `D:\\Python\\Project\\Modules` when you try to `import` a module.
+
+This technique is useful for dynamically managing where Python looks for modules at runtime.
+
+### Question 3
+Assuming that `D:\\Python\\Project\\Modules` is already appended to `sys.path`, and the directory structure is:
+
+```
+abc
+ |__ def
+     |__ mymodule.py
+```
+
+You can import `mymodule` using:
+
+```python
+import abc.def.mymodule
+```
+
+- After importing, you can access the entities inside `mymodule` using `abc.def.mymodule.entity_name`.
+- Make sure that both `abc` and `def` directories contain an `__init__.py` file (can be empty) to make them recognized as packages (especially important in older Python versions).
+
+This import method allows structured and organized module access.
+
