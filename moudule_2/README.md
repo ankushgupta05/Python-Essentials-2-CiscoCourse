@@ -322,8 +322,55 @@ find() :- It not genrate error if value not exits in the given strings
 index() :- It genrate error if value not exits in the given strings
 
 
+
+
+8)
+the_text = """A variation of the ordinary lorem ipsum
+text has been used in typesetting since the 1960s 
+or earlier, when it was popularized by advertisements 
+for Letraset transfer sheets. It was introduced to 
+the Information Age in the mid-1980s by the Aldus Corporation, 
+which employed it in graphics and word-processing templates
+for its desktop publishing program PageMaker (from Wikipedia)"""
+
+fnd = the_text.find('the')
+while fnd != -1:
+    print(fnd)
+    fnd = the_text.find('the', fnd + 1)
+
+//o/p
+15
+80
+198
+221
+238
+
+
+
+9)
+print('kappa'.find('a', 1, 4))
+print('kappa'.find('a', 2, 4))
+
+// o/p
+1
+-1
+
+
+// Note :
+.find(sub, start, end)
 ```
 
 
+# Demonstrating the `isalnum()` method
 
+| Expression | Result | Explanation |
+|:-----------|:-------|:------------|
+| `'lambda30'.isalnum()` | `True`  | Contains only letters and digits. |
+| `'lambda'.isalnum()`   | `True`  | Contains only letters. |
+| `'30'.isalnum()`       | `True`  | Contains only digits. |
+| `'@'.isalnum()`        | `False` | `@` is a special character, not alphanumeric. |
+| `'lambda_30'.isalnum()`| `False` | Underscore `_` is not considered alphanumeric. |
+| `''.isalnum()`         | `False` | Empty string returns `False`. |
+
+---
 
