@@ -654,12 +654,16 @@ I KNOW THAT I KNOW NOTHING. PART 2.
 
 
 
+# Python String Methods Quiz
 
+## Quiz Questions and Answers
 
-
-
-
-
+| Question No. | Question | Code | Expected Output | Explanation |
+|--------------|----------|------|-----------------|-------------|
+| 1            | What is the expected output of the following code? | ```python for ch in "abc123XYX": if ch.isupper(): print(ch.lower(), end='') elif ch.islower(): print(ch.upper(), end='') else: print(ch, end='') ``` | `ABC123xyx` | The code checks each character. If it's uppercase, it prints the lowercase of the character; if it's lowercase, it prints the uppercase of the character; else, it prints the character as is. |
+| 2            | What is the expected output of the following code? | ```python s1 = 'Where are the snows of yesteryear?' s2 = s1.split() print(s2[-2]) ``` | `of` | The `split()` method breaks the string into a list of words. `s2[-2]` fetches the second-to-last word from the list, which is `'of'`. |
+| 3            | What is the expected output of the following code? | ```python the_list = ['Where', 'are', 'the', 'snows?'] s = '*'.join(the_list) print(s) ``` | `Where*are*the*snows?` | The `join()` method joins all items in the list with the `'*'` separator, resulting in `'Where*are*the*snows?'`. |
+| 4            | What is the expected output of the following code? | ```python s = 'It is either easy or impossible' s = s.replace('easy', 'hard').replace('im', '') print(s) ``` | `It is either hard or possible` | The `replace()` method first replaces `'easy'` with `'hard'`, then it removes `'im'`, resulting in `'It is either hard or possible'`. |
 
 
 
