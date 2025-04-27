@@ -756,4 +756,28 @@ are
 
 
 
+## img question
+```
+1)
+s1 = '12'      # have integer string value
+i = int(s1)
+s2 = str(i)
+f = float(s2)
+print(s1 == s2)
+
+//o/p
+True
+
+2)
+s1 = '12.8'   # have float string value
+i = int(s1)
+s2 = str(i)
+f = float(s2)
+print(s1 == s2)
+
+//o/p
+Genrate ValueError 
+
+```
+
 
