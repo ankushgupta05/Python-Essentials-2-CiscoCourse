@@ -878,3 +878,41 @@ below written anwser
 | `x = math.sqrt(x)`                           | Calculates the square root of `x` if the assertion is passed.                                                                                                                   | `math.sqrt(9)` → `3.0`                     | (Does not execute due to AssertionError)   |
 | `print(x)`                                    | Prints the square root of `x`.                                                                                                                                                  | Output: `3.0`                              | No output due to the error.               |
 | **Outcome**                                   | If the assertion is true, the program continues and prints the square root of the number. If the assertion fails, an `AssertionError` occurs, stopping the program.           | No error. The program prints `3.0`.         | AssertionError raised, program stops.     |
+
+
+
+
+
+
+
+
+
+# Python Exceptions
+
+| **Error Type**     | **Description**                                      | **Example** |
+|--------------------|------------------------------------------------------|-------------|
+| **LookupError**     | Raised when an invalid index is used in a sequence (list, tuple, etc.) or an invalid key is used in a dictionary. | `list = [1, 2, 3] \nprint(list[5])`<br> This will raise a `IndexError`, but can be caught with `LookupError`. |
+| **IndexError**      | Raised when trying to access an index that is out of the range of a sequence. | `list = [1, 2, 3] \nprint(list[5])`<br> This will raise an `IndexError`, which indicates that the index is out of range for the given list. |
+| **ValueError**      | Raised when an operation or function receives an argument of the correct type but an inappropriate value. | `int("abc")`<br> This will raise a `ValueError` because `"abc"` cannot be converted to an integer. |
+| **KeyError**        | Raised when a dictionary key is not found. | `d = {"a": 1, "b": 2} \nprint(d["c"])`<br> This will raise a `KeyError` because "c" is not a valid key in the dictionary. |
+| **TypeError**       | Raised when an operation or function is applied to an object of an inappropriate type. | `a = "5" + 3`<br> This will raise a `TypeError` because you cannot add a string and an integer. |
+| **ZeroDivisionError**| Raised when dividing by zero. | `x = 1 / 0`<br> This will raise a `ZeroDivisionError`. |
+| **FileNotFoundError**| Raised when trying to open a file that does not exist. | `open("nonexistentfile.txt")`<br> This will raise a `FileNotFoundError`. |
+| **NameError**       | Raised when a local or global name is not found. | `print(undeclared_variable)`<br> This will raise a `NameError` because `undeclared_variable` has not been defined. |
+
+---
+
+### Example Code for Handling Exceptions
+
+#### Example 1: `IndexError` & `LookupError`
+```python
+try:
+    # Risky code: accessing an index out of range
+    lst = [1, 2, 3]
+    print(lst[5])
+except LookupError:
+    # Dealing with erroneous lookups (e.g., invalid index or key)
+    print("Caught a LookupError!")
+except IndexError:
+    # IndexError will not be caught here as it is a subclass of LookupError
+    print("Caught an IndexError!")
