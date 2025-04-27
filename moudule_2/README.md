@@ -230,6 +230,12 @@ print(list("abcabc"))
 
 //output
 ['a', 'b', 'c', 'a', 'b', 'c']
+
+
+6)
+print(len("\n\n"))
+// output
+2
 ```
 
 
