@@ -285,6 +285,43 @@ else:
     print("no")
 // o/p
 yes
+
+6)
+t = "zeta"
+print(t.endswith("a"))
+print(t.endswith("A"))
+print(t.endswith("et"))
+print(t.endswith("eta"))
+//o/p
+True
+False
+False
+True
+
+7)
+# Demonstrating the find() method:
+print("abcdEta".find("ta"))
+print("abcdEta".find("mma"))
+print("abnakuhs".index('a'))
+print("abnakuhs".index('ak'))
+print("abnakuhs".index('Z'))
+
+//o/p
+5
+-1
+0
+3
+Traceback (most recent call last):
+  File "main.py", line 6, in <module>
+    print("abnakuhs".index('Z'))
+ValueError: substring not found
+
+
+// NOTE :-
+find() :- It not genrate error if value not exits in the given strings
+index() :- It genrate error if value not exits in the given strings
+
+
 ```
 
 
