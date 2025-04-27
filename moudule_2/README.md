@@ -202,6 +202,18 @@ print(max(t))
 z
 [y]
 2
+
+
+3)
+# Demonstrating the index() method:
+print("aAbbByYzZabA".index("b"))
+print("aAbByYzZaA".index("Z"))
+print("aAbByYzZaA".index("A"))
+
+//output
+2
+7
+1
 ```
 
 
