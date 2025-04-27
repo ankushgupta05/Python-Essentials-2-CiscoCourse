@@ -657,3 +657,51 @@ pip install --user package_name
 This installs the package just for your user account without needing admin permissions.
 
 ---
+
+
+
+
+
+# Module 1 Test Summary
+
+Congratulations on completing Module 1! Here's a structured summary of all the Module 1 Test questions, their correct answers, and detailed explanations.
+
+| No. | Question | Correct Answer | Explanation |
+|:--:|:---------|:--------------|:------------|
+| 1 | Knowing that a function named `fun()` resides in a module named `mod`, choose the correct way to import it. | `from mod import fun` | `from mod import fun` properly imports the function `fun()` from the module `mod`. |
+| 2 | After `import mod`, how can `fun()` be invoked? | `mod.fun()` | Access the function with the module name: `mod.fun()`. |
+| 3 | Function returning all entities in a module? | `dir()` | `dir()` lists all the attributes and methods of an object/module. |
+| 4 | What does a `.pyc` file contain? | compiled Python code | `.pyc` files are compiled bytecode files for faster loading. |
+| 5 | When a module is imported, its contents: | are executed once (implicitly) | Code inside a module runs only once when imported. |
+| 6 | Predefined variable storing current module name? | `__name__` | `__name__` holds the module name or `__main__` if running directly. |
+| 7 | What does `from a.b import c` do? | entity `c` from module `b` from package `a` | It imports entity `c` from `b`, where `b` is a module inside package `a`. |
+| 8 | Expected value after `math.e != math.pow(2, 4)` and printed as int? | `1` | `math.e` (~2.718) is not equal to `2^4` (16), so `True` -> `1` when converted to int. |
+| 9 | Output of random `randint(1,2)` twice? | 11, 12, 21, or 22 | Each digit is randomly 1 or 2; four combinations possible: 11,12,21,22. |
+| 10 | Choose true statements (Select two) | - `The system function from the platform module returns a string with your OS name.` <br> - `The version function from the platform module returns a string with your OS version.` | `platform.system()` gives OS name; `platform.version()` gives OS version. |
+| 11 | Where are `.pyc` files stored after first import? | `__pycache__` | Python stores compiled `.pyc` files in the `__pycache__` directory. |
+| 12 | What does `#!` indicate? | Tell a Unix/Linux OS how to execute a Python file | `#!` (shebang) specifies the interpreter path on Unix-like OSes. |
+| 13 | Command to get package dependencies info? | `show` | `pip show <package>` displays metadata, including dependencies. |
+| 14 | What does `pip list` show? | locally installed packages | `pip list` shows all installed packages in the environment. |
+| 15 | True about `pip search` (Select two) | - `It searches through all PyPI packages.` <br> - `It needs a working Internet connection to work.` | `pip search` queries PyPI (Internet needed); it searches all available packages. |
+| 16 | True about `pip install` (Select two) | - `It installs a package per user only when the --user option is specified.` <br> - `It allows the user to install a specific version of the package.` | `pip install --user` installs only for current user; you can specify versions (e.g., `package==1.2.3`). |
+| 17 | How to update a package? | install command with `-U` option | `pip install -U package` upgrades a package to the newest version. |
+| 18 | Command to remove an installed package? | `pip uninstall package` | `pip uninstall <package>` is used to uninstall packages. |
+
+---
+
+# Module 1 Topics Covered
+
+- Working with Python modules (importing, creating, and using modules)
+- Using selected Python STL modules (`math`, `random`, `platform`)
+- Constructing and using packages
+- PIP (Python Package Installer) operations
+
+> You need **at least 70%** (13/18 correct) to pass!
+
+---
+
+**Good Luck! 🚀**
+
+---
+
+
