@@ -590,25 +590,70 @@ This import method allows structured and organized module access.
 
 
 
+# 1.4.9 SECTION QUIZ
 
+| Question No. | Question | Answer |
+|:------------:|:---------|:-------|
+| 1 | Where does the name "The Cheese Shop" come from? | It's a reference to an old Monty Python's sketch of the same name. |
+| 2 | Why should I ensure which one of pip and pip3 works for me? | When Python 2 and Python 3 coexist in your OS, it's likely that pip identifies the instance of pip working with Python 2 packages only. |
+| 3 | How can I determine if my pip works with either Python 2 or Python 3? | `pip --version` will tell you that. |
+| 4 | Unfortunately, I don't have administrative rights. What should I do to install a package system-wide? | You have to ask your sysadmin - don't try to hack your OS! |
 
-1.4.9 SECTION QUIZ
-Question 1: Where does the name "The Cheese Shop" come from?
+## Explanation
 
-Hide
-It's a reference to an old Monty Python's sketch of the same name.
+### Question 1
 
-Question 2: Why should I ensure which one of pip and pip3 works for me?
+**Q:** Where does the name "The Cheese Shop" come from?
 
-Hide
-When Python 2 and Python 3 coexist in your OS, it's likely that pip identifies the instance of pip working with Python 2 packages only.
+**A:**
+It refers to a classic comedy sketch by **Monty Python**. In the sketch, a customer tries to buy cheese at a shop that has no cheese available. Python’s package repository (previously nicknamed "Cheese Shop") humorously references this sketch.
 
-Question 3: How can I determine if my pip works with either Python 2 or Python 3?
+---
 
-Hide
-pip --version will tell you that.
+### Question 2
 
-Question 4: Unfortunately, I don't have administrative right. What should I do to install a package system-wide?
+**Q:** Why should I ensure which one of pip and pip3 works for me?
 
-Hide
-You have to ask your sysadmin - don't try to hack your OS!
+**A:**
+When both **Python 2** and **Python 3** are installed on your system, `pip` may point to Python 2’s package installer. You must ensure that you are using the correct version (`pip` for Python 2, `pip3` for Python 3) to avoid installation problems.
+
+---
+
+### Question 3
+
+**Q:** How can I determine if my pip works with either Python 2 or Python 3?
+
+**A:**
+Run the following command:
+
+```bash
+pip --version
+```
+
+This command shows which Python version your `pip` is associated with.
+
+Example output:
+
+```
+pip 21.2.4 from /usr/lib/python3.8/site-packages (python 3.8)
+```
+
+---
+
+### Question 4
+
+**Q:** Unfortunately, I don't have administrative rights. What should I do to install a package system-wide?
+
+**A:**
+You must request installation from your system administrator (**sysadmin**). Without administrative rights, you cannot install packages globally. **Do not try to bypass security policies**.
+
+Instead, you can:
+- Use `--user` flag with pip to install the package locally:
+
+```bash
+pip install --user package_name
+```
+
+This installs the package just for your user account without needing admin permissions.
+
+---
