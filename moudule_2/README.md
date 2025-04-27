@@ -538,4 +538,135 @@ Code | Explanation | Output
 .rfind("ta", 9) | Index 9 ke baad "ta" nahi milta | -1
 .rfind("ta", 3, 9) | Index 3 to 8 ke beech "ta" milta hai at index 4 | 4
 
+
+
+
+12)
+# Demonstrating the rstrip() method:
+print("[" + " upsilon ".rstrip() + "]")
+print("cisco.com".rstrip(".com"))
+
+//o/p
+[ upsilon]
+cis
+
+//NOTE :--
+Code | Explanation | Output
+" upsilon ".rstrip() | Right ka space hata diya | [ upsilon]
+"cisco.com".rstrip(".com") | Right se "m", "o", "c", "." hata diye | cisc
+
+
+13)
+# Demonstrating the split() method:
+print("phi       chi\npsi".split())
+//o/p
+['phi', 'chi', 'psi']
+
+
+14)
+# Demonstrating the startswith() method:
+print("omega".startswith("meg"))
+print("omega".startswith("om"))
+
+print()
+
+//o/p
+False
+True
+
+
+
+
+15)
+# Demonstrating the strip() method:
+print("[" + "   aleph   ".strip() + "]")
+
+//o/p
+[aleph]
+
+
+
+
+16)
+# Demonstrating the swapcase() method:
+print("I know that I know nothing.".swapcase())
+
+print()
+//o/p
+i KNOW THAT i KNOW NOTHING.
+
+
+
+17)
+# Demonstrating the title() method:
+print("I know that I know nothing. Part 1.".title())
+print("I know that I know nothing. Part 1.".capitalize())
+
+print()
+//o/p
+I Know That I Know Nothing. Part 1.
+I know that i know nothing. part 1.
+
+
+
+18)
+# Demonstrating the upper() method:
+print("I know that I know nothing. Part 2.".upper())
+//o/p
+I KNOW THAT I KNOW NOTHING. PART 2.
+
+
 ```
+
+# String Methods Summary
+
+| **Method** | **Description** |
+|:-----------|:----------------|
+| `capitalize()` | Changes the first character to uppercase. |
+| `center(width)` | Centers the string in a field of given width. |
+| `count(sub)` | Counts occurrences of a substring. |
+| `join(iterable)` | Joins elements of a list/tuple into a single string. |
+| `lower()` | Converts all letters to lowercase. |
+| `lstrip()` | Removes whitespace from the beginning. |
+| `replace(old, new)` | Replaces occurrences of a substring. |
+| `rfind(sub)` | Finds the last occurrence of a substring. |
+| `rstrip()` | Removes whitespace from the end. |
+| `split(sep)` | Splits the string into a list using a separator. |
+| `strip()` | Removes whitespace from both ends. |
+| `swapcase()` | Swaps case of each letter. |
+| `title()` | Capitalizes the first letter of each word. |
+| `upper()` | Converts all letters to uppercase. |
+
+# String Content Checking Methods
+
+| **Method** | **Description** |
+|:-----------|:----------------|
+| `endswith(sub)` | Checks if the string ends with a given substring. |
+| `isalnum()` | Checks if all characters are alphanumeric. |
+| `isalpha()` | Checks if all characters are letters. |
+| `islower()` | Checks if all letters are lowercase. |
+| `isspace()` | Checks if the string contains only whitespace. |
+| `isupper()` | Checks if all letters are uppercase. |
+| `startswith(sub)` | Checks if the string starts with a given substring. |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
