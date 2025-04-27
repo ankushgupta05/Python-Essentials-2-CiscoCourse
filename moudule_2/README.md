@@ -135,3 +135,13 @@ The string is "abdefg", so starting from the first character ('a' at index 0), w
 The output of alpha[::2] will be:
 'adf'
 ```
+
+
+
+## string in python is immutable
+| Concept                         | Explanation                                                                 | Example Code                                                             | Output Example           |
+|----------------------------------|-----------------------------------------------------------------------------|---------------------------------------------------------------------------|--------------------------|
+| Immutability of Strings         | Python strings are immutable, meaning their values cannot be changed once created. | `alphabet = "abcdefghijklmnopqrstuvwxyz"`<br>`del alphabet[0]`             | Error: `TypeError`       |
+| No Append Method                | Strings do not have an `append()` method to add characters to them.           | `alphabet = "abcdefghijklmnopqrstuvwxyz"`<br>`alphabet.append("A")`        | Error: `AttributeError`  |
+| No Insert Method                | Strings do not have an `insert()` method to insert characters at specific positions. | `alphabet = "abcdefghijklmnopqrstuvwxyz"`<br>`alphabet.insert(0, "A")`   | Error: `AttributeError`  |
+| Modifying Strings               | Since strings are immutable, you need to create a new string if modifications are needed. | `alphabet = "abcdefghijklmnopqrstuvwxyz"`<br>`alphabet = "A" + alphabet`  | `Aabcdefghijklmnopqrstuvwxyz` |
