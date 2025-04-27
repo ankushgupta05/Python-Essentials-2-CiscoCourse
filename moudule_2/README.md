@@ -494,4 +494,48 @@ First character: p → not in .org, so stop stripping immediately.
 Nothing removed | Because first character p is not ., o, r, or g
 .lstrip() only affects leftmost side | Doesn't find ., o, r, g immediately, so it keeps the string unchanged
 
+
+
+9)
+# Demonstrating the replace() method:
+print("www.netacad.com".replace("netacad.com", "pythoninstitute.org"))
+print("This is it!".replace("is", "are"))
+print("Apple juice".replace("juice", ""))
+//o/p
+www.pythoninstitute.org
+Thare are it!
+Apple
+
+
+10)
+print("This is it!".replace("is", "are", 1))
+print("This is it!".replace("is", "are", 2))
+print("This is is it!".replace("is", "are", 2))
+print("This is is it!".replace("is", "are", 3))
+
+//o/p
+Thare is it!
+Thare are it!
+Thare are is it!
+Thare are are it!
+
+11)
+# Demonstrating the rfind() method:
+print("tau tau tau".rfind("ta"))
+print("tau tau tau".rfind("ta", 9))
+print("tau tau tau".rfind("ta", 3, 9))
+
+//
+8
+-1
+4
+
+//Note :-
+The one-, two-, and three-parameter versions of the rfind() method do nearly the same things as their counterparts (the ones devoid of the r prefix), but start their searches from the end of the string, not the beginning (hence the prefix r, for right).
+
+Code | Explanation | Output
+.rfind("ta") | Full string, right se search karega → last "ta" at index 8 | 8
+.rfind("ta", 9) | Index 9 ke baad "ta" nahi milta | -1
+.rfind("ta", 3, 9) | Index 3 to 8 ke beech "ta" milta hai at index 4 | 4
+
 ```
