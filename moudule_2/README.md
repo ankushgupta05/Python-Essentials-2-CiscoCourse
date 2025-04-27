@@ -79,5 +79,46 @@ print(len(multiline))
 
 
 3)
+# Demonstrating the ord() function.
 
+char_1 = 'a'
+char_2 = ' '  # space
+
+print(ord(char_1))
+print(ord(char_2))
+
+//output
+97
+32
+
+
+
+4)
+print(chr(97))
+print(chr(945))
+//output
+a
+α
+
+
+5)
+# Slices
+
+alpha = "abdefg"
+
+print(alpha[1:3])
+print(alpha[3:])
+print(alpha[:3])
+print(alpha[3:-2])
+print(alpha[-3:4])
+print(alpha[::2])
+print(alpha[1::2])
+//output
+bd
+efg
+abd
+e
+e
+adf
+beg
 ```
