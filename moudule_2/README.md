@@ -52,4 +52,32 @@ print(len(i_am))
 2
 0
 3
+
+
+
+2)
+multiline = '''Line #1
+Line #2'''
+
+print(len(multiline))
+
+//output
+15
+
+NOTE :-
+above one extra space for '\n'
+
+3)
+multiline = """Line #1
+Line #2"""
+
+print(len(multiline))
+
+// output
+15
+
+
+
+3)
+
 ```
