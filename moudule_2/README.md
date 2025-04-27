@@ -390,3 +390,84 @@ False
 False
 True
 ```
+
+## isalpha() method is more specialized – it's interested in letters only.
+```
+1)
+# Example 1: Demonstrating the isapha() method:
+print("Moooo".isalpha())
+print('Mu40'.isalpha())
+
+//o/p
+True
+False
+
+2)
+
+```
+## isdigit() method looks at digits only – anything else produces False as the result.
+```
+1)
+# Example 2: Demonstrating the isdigit() method:
+print('2018'.isdigit())
+print("Year2019".isdigit())
+
+True
+False
+```
+
+### img keyword
+```
+1)
+
+# Example: Demonstrating the islower() method:
+print("Moooo".islower())
+print('moooo'.islower())
+
+//o/p
+False
+True
+
+2)
+# Example: Demonstrating the isspace() method:
+print(' \n '.isspace())
+print(" ".isspace())
+print("mooo mooo mooo".isspace())
+//o/p
+True
+True
+False
+
+
+3)
+# Example: Demonstrating the isupper() method:
+print("Moooo".isupper())
+print('moooo'.isupper())
+print('MOOOO'.isupper())
+//o/p
+False
+False
+True
+
+
+4)
+# Demonstrating the join() method:
+print(",".join(["omicron", "pi", "rho"]))
+//o/p
+omicron,pi,rho
+
+
+5)
+# Demonstrating the lower() method:
+print("SiGmA=60".lower())
+//o/p
+sigma=60
+
+
+6)
+
+
+
+
+
+```
