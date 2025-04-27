@@ -905,7 +905,8 @@ below written anwser
 ### Example Code for Handling Exceptions
 
 #### Example 1: `IndexError` & `LookupError`
-```python
+```
+python
 try:
     # Risky code: accessing an index out of range
     lst = [1, 2, 3]
@@ -916,3 +917,14 @@ except LookupError:
 except IndexError:
     # IndexError will not be caught here as it is a subclass of LookupError
     print("Caught an IndexError!")
+```
+
+
+
+# 2.7.3 Section Quiz
+
+| **Question** | **Code** | **Expected Output** | **Explanation** |
+|--------------|----------|---------------------|-----------------|
+| **Question 1**: What is the expected output of the following code? | ```python<br>try:<br>    print(1/0)<br>except ZeroDivisionError:<br>    print("zero")<br>except ArithmeticError:<br>    print("arith")<br>except:<br>    print("some")``` | **zero** | The `ZeroDivisionError` is raised first, and the corresponding exception handler prints "zero". |
+| **Question 2**: What is the expected output of the following code? | ```python<br>try:<br>    print(1/0)<br>except ArithmeticError:<br>    print("arith")<br>except ZeroDivisionError:<br>    print("zero")<br>except:<br>    print("some")``` | **arith** | The `ArithmeticError` is a superclass of `ZeroDivisionError`, so the first matching handler is executed. |
+| **Question 3**: What is the expected output of the following code? | ```python<br>def foo(x):<br>    assert x<br>    return 1/x<br><br>try:<br>    print(foo(0))<br>except ZeroDivisionError:<br>    print("zero")<br>except:<br>    print("some")``` | **some** | The `assert` statement fails for 0, causing an `AssertionError`, which is caught by the general `except` block, printing "some". |
