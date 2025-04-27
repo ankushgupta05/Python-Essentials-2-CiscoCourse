@@ -673,4 +673,25 @@ I KNOW THAT I KNOW NOTHING. PART 2.
 
 
 
+## 2.4 module
+### String Comparison in Python
+
+| **Code**                        | **Explanation**                                                                                                                                                       | **Output** |
+|----------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------|
+| `'alpha' == 'alpha'`             | Both strings are identical.                                                                                                                                            | `True`     |
+| `'alpha' != 'Alpha'`             | The strings are compared case-sensitively, so `'alpha'` is different from `'Alpha'` because of the first letter's case.                                               | `True`     |
+| `'alpha' < 'alphabet'`           | Lexicographically, `'alpha'` comes before `'alphabet'` as it is a prefix of `'alphabet'`.                                                                            | `True`     |
+| `print('10' == '010')`           | The strings `'10'` and `'010'` are not the same because they have different lengths, as the second string has a leading zero.                                         | `False`    |
+| `print('10' > '010')`            | Lexicographically, `'10'` is greater than `'010'` because `'1' > '0'` in string comparison.                                                                          | `True`     |
+| `print('10' > '8')`              | `'10'` is greater than `'8'` lexicographically because `'1' > '8'`.                                                                                                 | `True`     |
+| `print('20' < '8')`              | Lexicographically, `'20'` is not less than `'8'` because `'2' > '8'`.                                                                                                | `False`    |
+| `print('20' < '80')`             | Lexicographically, `'20'` is less than `'80'` because `'2' < '8'`.                                                                                                 | `True`     |
+
+### Key Point:
+String comparisons in Python are lexicographical, meaning they are compared character by character based on their Unicode values. This does not account for numerical values but compares the characters themselves.
+
+
+
+
+
 
