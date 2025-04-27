@@ -121,4 +121,17 @@ e
 e
 adf
 beg
+
+
+// Note :-
+The string is "abdefg", so starting from the first character ('a' at index 0), we select every second character:
+
+'a' (index 0)
+
+'d' (index 2)
+
+'f' (index 4)
+
+The output of alpha[::2] will be:
+'adf'
 ```
