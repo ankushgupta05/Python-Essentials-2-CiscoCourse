@@ -781,3 +781,12 @@ Genrate ValueError
 ```
 
 
+## 2.4.5 SECTION QUIZ
+
+| **Question** | **Code** | **Answer** | **Explanation** |
+|--------------|----------|------------|-----------------|
+| **Question 1:** Which of the following lines describe a true condition? <br> 'smith' > 'Smith' <br> 'Smiths' < 'Smith' <br> 'Smith' > '1000' <br> '11' < '8' | `'smith' > 'Smith'` <br> `'Smiths' < 'Smith'` <br> `'Smith' > '1000'` <br> `'11' < '8'` | 1, 3, and 4 | Strings are compared lexicographically based on their Unicode code points. 'smith' > 'Smith' because lowercase letters have higher Unicode values than uppercase letters. |
+| **Question 2:** What is the expected output of the following code? <br> s1 = 'Where are the snows of yesteryear?' <br> s2 = s1.split() <br> s3 = sorted(s2) <br> print(s3[1]) | `s1 = 'Where are the snows of yesteryear?'` <br> `s2 = s1.split()` <br> `s3 = sorted(s2)` <br> `print(s3[1])` | `are` | The `split()` method breaks the string into words. The `sorted()` method sorts the list alphabetically. 'are' is the second word in the sorted list. |
+| **Question 3:** What is the expected result of the following code? <br> s1 = '12.8' <br> i = int(s1) <br> s2 = str(i) <br> f = float(s2) <br> print(s1 == s2) | `s1 = '12.8'` <br> `i = int(s1)` <br> `s2 = str(i)` <br> `f = float(s2)` <br> `print(s1 == s2)` | The code raises a ValueError exception | The `int()` function cannot convert a string with a decimal point ('12.8') into an integer, leading to a ValueError. |
+
+
