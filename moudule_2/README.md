@@ -737,6 +737,20 @@ print(s2)
 
 //0/p
 ['Where', 'are', 'the', 'snows', 'of', 'yesteryear?']
+
+
+5)
+s1 = 'Where are the snows of yesteryear?'
+s2 = s1.split()
+print(s2)
+s3 = sorted(s2)
+print(s3)
+print(s3[1])
+//
+['Where', 'are', 'the', 'snows', 'of', 'yesteryear?']
+['Where', 'are', 'of', 'snows', 'the', 'yesteryear?']
+are
+
 ```
 
 
