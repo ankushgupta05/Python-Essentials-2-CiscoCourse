@@ -465,9 +465,33 @@ sigma=60
 
 
 6)
+# Demonstrating the lstrip() method:
+print("[" + " tau ".lstrip() + "]")
+
+//o/p
+[tau ]
+
+// Note :-
+The parameterless version of the lstrip() method returns a newly created string formed from the original one by removing all leading whitespaces.
 
 
 
+7)
+print("www.cisco.com".lstrip("w."))
+//o/p
+cisco.com
 
+
+8)
+print("pythoninstitute.org".lstrip(".org"))
+//o/p
+pythoninstitute.org
+
+// Note :-
+Your string is: "pythoninstitute.org"
+First character: p → not in .org, so stop stripping immediately.
+
+Nothing removed | Because first character p is not ., o, r, or g
+.lstrip() only affects leftmost side | Doesn't find ., o, r, g immediately, so it keeps the string unchanged
 
 ```
