@@ -19,3 +19,37 @@ Python 3 fully supports Unicode and UTF-8, meaning it is completely internationa
 |--------------|------------|-------------|
 | **What is BOM?** | BOM (Byte Order Mark) is a special combination of bits announcing the encoding used by a file's content (e.g., UCS-4 or UTF-8). | Example: In UTF-8 encoded files, the BOM might be `EF BB BF` at the beginning of the file. |
 | **Is Python 3 I18Ned?** | Yes, Python 3 is completely internationalized. It fully supports Unicode and UTF-8 encoding for input, output, and code. | Example: You can use characters like `汉` (Chinese) or `日本` (Japanese) in Python 3 variable names. |
+
+
+
+
+
+
+
+
+### imp pro.
+```
+1)
+# Example 1
+
+word = 'by'
+print(len(word))
+
+
+# Example 2
+
+empty = ''
+print(len(empty))
+
+
+# Example 3
+
+i_am = 'I\'m'
+print(len(i_am))
+
+
+//output
+2
+0
+3
+```
