@@ -214,6 +214,22 @@ print("aAbByYzZaA".index("A"))
 2
 7
 1
+
+4)
+# Demonstrating the count() method:
+print("abcabc".count("b"))
+print('abcabc'.count("d"))
+
+//
+2
+0
+
+5)
+# Demonstrating the list() function:
+print(list("abcabc"))
+
+//output
+['a', 'b', 'c', 'a', 'b', 'c']
 ```
 
 
