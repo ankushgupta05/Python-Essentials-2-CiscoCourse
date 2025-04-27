@@ -239,5 +239,54 @@ print(len("\n\n"))
 ```
 
 
+## string method 
+```
+1)
+print("Alpha".capitalize())
+print('ALPHA'.capitalize())
+print(' Alpha'.capitalize())
+print('123'.capitalize())
+print("αβγδ".capitalize())
+
+// output
+Alpha
+Alpha
+ alpha
+123
+Αβγδ
+
+2)
+# Demonstrating the center() method:
+print('[' + 'alpha'.center(10) + ']')
+//o/p
+[  alpha   ]
+
+
+3)
+print('[' + 'Beta'.center(2) + ']')
+print('[' + 'Beta'.center(4) + ']')
+print('[' + 'Beta'.center(6) + ']')
+//o/p
+[Beta]  # argument 2 pass kiya hai but character string jada hai isliye only string output aaya hai
+[Beta]
+[ Beta ]   # total 6 space inside []
+
+4)
+print('[' + 'gamma'.center(20, '*') + ']')
+//o/p
+[*******gamma********]
+
+
+5)
+# Demonstrating the endswith() method:
+if "epsilon".endswith("on"):
+    print("yes")
+else:
+    print("no")
+// o/p
+yes
+```
+
+
 
 
