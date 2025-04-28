@@ -335,4 +335,13 @@ print(obj.__dict__)
 
 
 ## quize 3.3
+# Python Class Variables vs Instance Variables
+
+| Question | Code | Answer | Explanation |
+|:---------|:-----|:-------|:------------|
+| 1. Which of the Python class properties are instance variables and which are class variables? Which of them are private? | ```python class Python: population = 1 victims = 0 def __init__(self): self.length_ft = 3 self.__venomous = False ``` | `population`, `victims` = class variables; `length_ft`, `__venomous` = instance variables; `__venomous` is private | Class variables are shared across all objects, instance variables are unique for each object. `__venomous` uses name mangling (_Python__venomous) to make it private. |
+| 2. How will you negate the private __venomous attribute of version_2? | ```python version_2 = Python() version_2._Python__venomous = not version_2._Python__venomous ``` | Done using name mangling: `_Python__venomous` | Even private variables can be accessed using name-mangled names in Python. |
+| 3. How to check if the object has a property named 'constrictor'? | ```python hasattr(version_2, 'constrictor') ``` | Use `hasattr` function | `hasattr(object, 'attribute')` checks if an object has a specific attribute and returns `True` or `False`. |
+
+
 
