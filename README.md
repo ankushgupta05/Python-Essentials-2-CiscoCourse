@@ -345,3 +345,22 @@ print(obj.__dict__)
 
 
 
+
+## 3.4
+```
+1)
+class Classy:
+    varia = 2
+    def method(self):
+        print(self.varia, self.var)
+
+
+obj = Classy()
+obj.var = 3
+obj.method()
+
+//o/p
+2 3
+```
+
+
