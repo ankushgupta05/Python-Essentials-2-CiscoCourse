@@ -388,6 +388,79 @@ obj._Classy__hidden()
 visible
 failed
 hidden
+
+
+3)
+class Classy:
+    varia = 1
+    def __init__(self):
+        self.var = 2
+
+    def method(self):
+        pass
+
+    def __hidden(self):
+        pass
+
+
+obj = Classy()
+
+print(obj.__dict__)
+print(Classy.__dict__)
+
+//o/p
+{'var': 2}
+{'__module__': '__main__', 'varia': 1, '__init__': <function Classy.__init__ at 0x7f6572137320>, 'method': <function Classy.method at 0x7f6572137ef0>, '_Classy__hidden': <function Classy.__hidden at 0x7f6572137f80>, '__dict__': <attribute '__dict__' of 'Classy' objects>, '__weakref__': <attribute '__weakref__' of 'Classy' objects>, '__doc__': None}
+
+
+
+4)
+class Classy:
+    pass
+
+
+print(Classy.__name__)
+obj = Classy()
+print(type(obj).__name__)
+
+// o/p
+Classy
+Classy
+
+
+// NOTE :-
+print(obj.__name__)  # this line will genrate error 
+
+5)
+class Classy:
+    pass
+
+
+print(Classy.__module__)
+obj = Classy()
+print(obj.__module__)
+
+//o/p
+__main__
+__main__
+
+
+6)
+
+class Snake:
+    pass
+ 
+ 
+class Python(Snake):
+    pass
+ 
+ 
+print(Python.__name__, 'is a', Snake.__name__)
+print(Python.__bases__[0].__name__, 'can be', Python.__name__)
+
+//o/p
+Python is a Snake
+Snake can be Python
 ```
 
 
