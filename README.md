@@ -257,6 +257,32 @@ except AttributeError:
 ```
 
 
+## imp hasattr()
+```
+1)
+class ExampleClass:
+    attr = 1
+
+
+print(hasattr(ExampleClass, 'attr'))
+print(hasattr(ExampleClass, 'prop'))
+
+//o/p
+True
+False
+
+//NOTE :-
+hasattr(object, name)
+
+Ye function check karta hai:
+➔ kya object ke andar koi variable, attribute, ya method exist karta hai ya nahi.
+Return karta hai:
+True ➔ Agar attribute/method maujood hai
+False ➔ Agar attribute/method nahi hai
+
+
+```
+
 
 
 
