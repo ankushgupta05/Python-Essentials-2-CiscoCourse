@@ -346,7 +346,7 @@ print(obj.__dict__)
 
 
 
-## 3.4
+## 3.4  img concept
 ```
 1)
 class Classy:
@@ -361,6 +361,33 @@ obj.method()
 
 //o/p
 2 3
+
+
+
+2)
+class Classy:
+    def visible(self):
+        print("visible")
+
+    def __hidden(self):
+        print("hidden")
+
+
+obj = Classy()
+obj.visible()
+
+try:
+    obj.__hidden()
+except:
+    print("failed")
+
+obj._Classy__hidden()
+
+
+//o/p
+visible
+failed
+hidden
 ```
 
 
