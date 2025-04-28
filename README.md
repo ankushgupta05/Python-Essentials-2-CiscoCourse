@@ -111,18 +111,26 @@ Sum: 0
 ```
 1)
 class ExampleClass:
-    def __init__(self, val = 1):   # Constructor setting 'first'
-        self.first = val
+    def __init__(self, val = 1):
+        self.first = val  # ✅ Instance variable 'first' is created here (belongs to object)
 
-    def set_second(self, val):     # Method setting 'second'
-        self.second = val
+    def set_second(self, val):
+        self.second = val  # ✅ Instance variable 'second' is created here (only if method called)
+
 
 # Create objects
-example_object_1 = ExampleClass()        # first = 1
-example_object_2 = ExampleClass(2)        # first = 2
-example_object_2.set_second(3)            # second = 3
-example_object_3 = ExampleClass(4)        # first = 4
-example_object_3.third = 5                # Added 'third' directly
+example_object_1 = ExampleClass()        
+# 👆 Only 'first' is created = 1
+
+example_object_2 = ExampleClass(2)        
+example_object_2.set_second(3)  
+# 👆 'first' = 2 from constructor
+# 👆 'second' = 3 from set_second() method
+
+example_object_3 = ExampleClass(4)
+example_object_3.third = 5  
+# 👆 'first' = 4 from constructor
+# 👆 'third' = 5 added manually (outside the class)
 
 # Print their __dict__
 print(example_object_1.__dict__)  # {'first': 1}
