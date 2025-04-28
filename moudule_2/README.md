@@ -1071,3 +1071,31 @@ print("The number is:", number)
 | Which exception will you use to protect your code from being interrupted through the use of the keyboard? | `KeyboardInterrupt` |
 | What is the name of the most general of all Python exceptions? | `BaseException` |
 | Which exception will be raised through the following unsuccessful evaluation: `huge_value = 1E250 ** 2`? | `OverflowError` |
+
+
+
+
+# Python Exception Handling Quiz - 1 to 20
+
+| Question | Answer | Code/Explanation |
+|----------|--------|------------------|
+| **Question 1:** Which of the exceptions will you use to protect your code from being interrupted through the use of the keyboard? | KeyboardInterrupt | The `KeyboardInterrupt` exception is raised when the user interrupts the execution (e.g., using `Ctrl+C`). |
+| **Question 2:** What is the name of the most general of all Python exceptions? | BaseException | `BaseException` is the top-most class from which all other exceptions inherit. |
+| **Question 3:** Which of the exceptions will be raised through the following unsuccessful evaluation? `huge_value = 1E250 ** 2` | OverflowError | This code leads to an overflow because the number is too large to be stored. |
+| **Question 4:** Entering the try: block implies that: | Some of the instructions may not be executed | If an exception occurs inside the `try` block, only the code before the exception executes. |
+| **Question 5:** The unnamed except: block: | Must be the last one | The unnamed `except:` block should be placed last to catch any unhandled exceptions. |
+| **Question 6:** The top-most Python exception is called: | BaseException | `BaseException` is the most general exception, from which all others inherit. |
+| **Question 7:** The following statement: `assert var == 0` | Will stop the program when `var != 0` | The `assert` statement checks if the condition is true. If false, it raises an `AssertionError` and stops the program. |
+| **Question 8:** What is the expected output of the following code? `try: print("5"/0) except ArithmeticError: print("arith") except ZeroDivisionError: print("zero") except: print("some")` | zero | `ZeroDivisionError` is raised and handled by the second `except` block, printing "zero". |
+| **Question 9:** Which of the following are examples of built-in concrete Python exceptions? | ImportError, IndexError | Both `ImportError` and `IndexError` are concrete exceptions. `BaseException` and `ArithmeticError` are abstract exceptions. |
+| **Question 10:** ASCII is: | Short for American Standard Code for Information Interchange | ASCII is a character encoding standard. |
+| **Question 11:** UTF‑8 is: | A form of encoding Unicode code points | UTF-8 is a widely used encoding for Unicode. |
+| **Question 12:** UNICODE is a standard: | Like ASCII, but much more expansive | Unicode is a universal character encoding standard, whereas ASCII is limited. |
+| **Question 13:** The following code: `x = '\'' print(len(x))` prints: | 1 | The string `'\''` represents a single quote, which is one character long. |
+| **Question 14:** The following code: `print(ord('c') - ord('a'))` prints: | 2 | The difference between the Unicode code points of 'c' and 'a' is 2. |
+| **Question 15:** The following code: `print(chr(ord('z') - 2))` prints: | x | The Unicode character corresponding to the code point of 'z' - 2 is 'x'. |
+| **Question 16:** The following code: `print(3 * 'abc' + 'xyz')` prints: | abcabcabcxyz | The string 'abc' is repeated 3 times, and 'xyz' is appended. |
+| **Question 17:** The following code: `print('Mike' > "Mikey")` prints: | True | String comparison is lexicographical, and 'Mike' is greater than 'Mikey'. |
+| **Question 18:** The following code: `print(float("1, 3"))` prints: | Raises a ValueError exception | The string "1, 3" is invalid for conversion to float because of the comma. |
+| **Question 19:** The following code: `x = ' '` print(len(x)) prints: | 1 | The string ' ' (space) has a length of 1. |
+| **Question 20:** The following code: `print(ord('a') - ord('A'))` prints: | 32 | The difference between the Unicode code points of 'a' and 'A' is 32. |
