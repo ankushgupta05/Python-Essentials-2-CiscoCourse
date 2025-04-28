@@ -281,6 +281,34 @@ True ➔ Agar attribute/method maujood hai
 False ➔ Agar attribute/method nahi hai
 
 
+
+2)
+class ExampleClass:
+    a = 1  # → Class Variable
+
+    def __init__(self):
+        self.b = 2  # → Instance Variable
+
+example_object = ExampleClass()
+
+print(hasattr(example_object, 'b'))  # (1)
+print(hasattr(example_object, 'a'))  # (2)
+print(hasattr(ExampleClass, 'b'))    # (3)
+print(hasattr(ExampleClass, 'a'))    # (4)
+
+//o/p
+True
+True
+False
+True
+
+
+//NOTE :-
+Line | Explanation | Output
+(1) hasattr(example_object, 'b') | example_object ke andar b hai (instance variable) | ✅ True
+(2) hasattr(example_object, 'a') | example_object class se inherit karke a ko bhi access karta hai | ✅ True
+(3) hasattr(ExampleClass, 'b') | ExampleClass khud b ko define nahi karta (b sirf object me hai) | ❌ False
+(4) hasattr(ExampleClass, 'a') | ExampleClass ke andar directly a define hai | ✅ True
 ```
 
 
