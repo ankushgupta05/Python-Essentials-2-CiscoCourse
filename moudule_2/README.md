@@ -956,3 +956,108 @@ except IndexError:
 | **Question 1**: What is the expected output of the following code? | ```python<br>try:<br>    print(1/0)<br>except ZeroDivisionError:<br>    print("zero")<br>except ArithmeticError:<br>    print("arith")<br>except:<br>    print("some")``` | **zero** | The `ZeroDivisionError` is raised first, and the corresponding exception handler prints "zero". |
 | **Question 2**: What is the expected output of the following code? | ```python<br>try:<br>    print(1/0)<br>except ArithmeticError:<br>    print("arith")<br>except ZeroDivisionError:<br>    print("zero")<br>except:<br>    print("some")``` | **arith** | The `ArithmeticError` is a superclass of `ZeroDivisionError`, so the first matching handler is executed. |
 | **Question 3**: What is the expected output of the following code? | ```python<br>def foo(x):<br>    assert x<br>    return 1/x<br><br>try:<br>    print(foo(0))<br>except ZeroDivisionError:<br>    print("zero")<br>except:<br>    print("some")``` | **some** | The `assert` statement fails for 0, causing an `AssertionError`, which is caught by the general `except` block, printing "some". |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## all type of exception
+```
+1) assert exception
+from math import tan, radians
+angle = int(input('Enter integral angle in degrees: '))
+
+# We must be sure that angle != 90 + k * 180
+assert angle % 180 != 90
+print(tan(radians(angle)))
+
+
+
+2)
+IndexError
+Location: BaseException ← Exception ← LookupError ← IndexError
+
+Description: a concrete exception raised when you try to access a non-existent sequence's element (e.g., a list's element)
+
+Code:
+
+# The code shows an extravagant way
+# of leaving the loop.
+
+the_list = [1, 2, 3, 4, 5]
+ix = 0
+do_it = True
+
+while do_it:
+    try:
+        print(the_list[ix])
+        ix += 1
+    except IndexError:
+        do_it = False
+
+print('Done')
+
+
+
+
+```
+
+
+# 📚 Python Built-in Exceptions (Simplified Table)
+
+Python programming mein galtiyan aur errors normal hote hain. Python ne inko sambhalne ke liye kuch built-in exceptions diye hain. Yaha hum important exceptions ko asaan aur simple language mein table ke form mein samjhayenge.
+
+---
+
+| No. | Exception Name    | Short Description (Easy Language)                                                                          | Example Code | Output |
+|---- |-------------------|------------------------------------------------------------------------------------------------------------|--------------|--------|
+| 1. | **ArithmeticError** | Maths calculation mein galti (jaise divide by zero ya wrong input)                                          | ```python\nfrom math import tan, radians\nangle = int(input('Enter angle: '))\nassert angle % 180 != 90\nprint(tan(radians(angle)))\n``` | Angle agar 90, 270 ho to error |
+| 2. | **AssertionError**  | Jab `assert` ka condition galat ho jaye. Developer check ke liye use karta hai.                            | ```python\nassert 2 + 2 == 5\n``` | AssertionError |
+| 3. | **BaseException**   | Sabse upar wali exception. Sare exceptions iske under aate hain.                                            | ```python\ntry:\n    x = 1/0\nexcept BaseException:\n    print("Caught base exception")\n``` | Caught base exception |
+| 4. | **IndexError**      | Jab list ya tuple ke wrong index ko access karein.                                                          | ```python\nthe_list = [1, 2, 3]\nprint(the_list[5])\n``` | IndexError |
+| 5. | **KeyboardInterrupt** | Jab user program ko beech mein Ctrl+C se band karne ki koshish kare.                                     | ```python\ntry:\n    while True:\n        pass\nexcept KeyboardInterrupt:\n    print("Program stopped by user")\n``` | Program stopped by user |
+| 6. | **LookupError**     | Jab list, dictionary jaise collection mein galat key ya index ka use karein.                               | ```python\nmy_list = [1,2]\nprint(my_list[5])\n``` | LookupError |
+| 7. | **MemoryError**     | Jab program itna bada ho jaye ki system ki memory khatam ho jaye.                                            | ```python\nstring = 'x'\ntry:\n    while True:\n        string += string\nexcept MemoryError:\n    print('Out of Memory!')\n``` | Out of Memory! |
+| 8. | **OverflowError**   | Jab koi calculation number ko itna bada bana de ki Python store nahi kar paaye.                             | ```python\nfrom math import exp\nex = 1\ntry:\n    while True:\n        print(exp(ex))\n        ex *= 2\nexcept OverflowError:\n    print('Number too big')\n``` | Number too big |
+| 9. | **ImportError**     | Jab kisi galat ya missing module ko import karne ki koshish karein.                                          | ```python\ntry:\n    import math\n    import abracadabra\nexcept ImportError:\n    print('Import failed')\n``` | Import failed |
+| 10. | **KeyError**        | Jab dictionary mein aisi key access karen jo exist nahi karti.                                               | ```python\ndictionary = {'a': 'apple'}\nprint(dictionary['b'])\n``` | KeyError: 'b' |
+
+---
+
+# 📌 2.8.2 LAB: Safely Reading Integers (Simple Input Validation)
+
+User se safe integer input lena hai. Agar galat input aaye to message dena hai aur phir se input lena hai.
+
+### Sample Code:
+
+```
+python
+def read_int(prompt, min, max):
+    while True:
+        try:
+            value = int(input(prompt))
+            if value < min or value > max:
+                print(f"Error: the value is not within permitted range ({min}..{max})")
+            else:
+                return value
+        except ValueError:
+            print("Error: wrong input")
+
+number = read_int("Enter a number from -10 to 10: ", -10, 10)
+print("The number is:", number)
+
+
+```
