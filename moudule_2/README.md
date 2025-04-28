@@ -1059,5 +1059,15 @@ def read_int(prompt, min, max):
 number = read_int("Enter a number from -10 to 10: ", -10, 10)
 print("The number is:", number)
 
-
 ```
+
+
+
+
+# 📋 2.8.4 SECTION QUIZ
+
+| **Question** | **Answer** |
+|:-------------|:-----------|
+| Which exception will you use to protect your code from being interrupted through the use of the keyboard? | `KeyboardInterrupt` |
+| What is the name of the most general of all Python exceptions? | `BaseException` |
+| Which exception will be raised through the following unsuccessful evaluation: `huge_value = 1E250 ** 2`? | `OverflowError` |
