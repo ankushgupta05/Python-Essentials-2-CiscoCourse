@@ -103,19 +103,59 @@ Sum: 30
 Sum: 10
 Sum: 0
 
+```
 
 
 
+## OOPS
+```
+1)
+class ExampleClass:
+    def __init__(self, val = 1):   # Constructor setting 'first'
+        self.first = val
+
+    def set_second(self, val):     # Method setting 'second'
+        self.second = val
+
+# Create objects
+example_object_1 = ExampleClass()        # first = 1
+example_object_2 = ExampleClass(2)        # first = 2
+example_object_2.set_second(3)            # second = 3
+example_object_3 = ExampleClass(4)        # first = 4
+example_object_3.third = 5                # Added 'third' directly
+
+# Print their __dict__
+print(example_object_1.__dict__)  # {'first': 1}
+print(example_object_2.__dict__)  # {'first': 2, 'second': 3}
+print(example_object_3.__dict__)  # {'first': 4, 'third': 5}
 
 
+//o/p
+{'first': 1}
+{'first': 2, 'second': 3}
+{'first': 4, 'third': 5}
 
 
+//NOTE :-
+Object | Properties inside __dict__
+example_object_1 | 'first': 1
+example_object_2 | 'first': 2, 'second': 3
+example_object_3 | 'first': 4, 'third': 5
 
-
-
-
-
-
-
+Point | Explanation
+1 | In Python, every object automatically gets a hidden __dict__ attribute.
+2 | __dict__ is a dictionary that stores all variables and their values inside the object.
+3 | You can create object variables in the constructor (__init__) or by using methods.
+4 | You can even add new properties outside the class anytime (Python allows it).
+5 | Using print(object.__dict__), you can see all current variables of the object.
 
 ```
+
+
+
+
+
+
+
+
+
