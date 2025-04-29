@@ -372,3 +372,50 @@ obj.fun()     # Left.fun() is chosen because Left comes before Right in MRO ✅
 
 ```
 
+
+## How to build a hierarchy of classes
+```
+class One:
+    def do_it(self):
+        print("do_it from One")
+
+    def doanything(self):
+        self.do_it()
+
+
+class Two(One):
+    def do_it(self):
+        print("do_it from Two")
+
+
+one = One()
+two = Two()
+
+one.doanything()
+two.doanything()
+    
+
+//o/p
+do_it from One
+do_it from Two
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
