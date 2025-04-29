@@ -102,11 +102,85 @@ f(1)=0
 f(2)=2
 
 
+```
+
+## Lambdas and the map() function
+```
+1)
+list_1 = [x for x in range(5)]
+list_2 = list(map(lambda x: 2 ** x, list_1))
+print(list_2)
+
+for x in map(lambda x: x * x, list_2):
+    print(x, end=' ')
+print()
+    
+print(map(lambda x: x * x, list_2))
+
+//o/p
+[1, 2, 4, 8, 16]
+1 4 16 64 256 
+<map object at 0x7fbe848f5b90>
 
 
-3)
+2)
+list_1 = [x for x in range(5)]
+list_2 = list(map(lambda x: 2 ** x, list_1))
+print(list_2)
+
+for x in map(lambda x: x * x, list_2):
+    print(x, end=' ')
+print()
+    
+print(map(lambda x: x * x, list_2))
+print()
+print(list(map(lambda x: x * x, list_2)))
+
+//o/p
+[1, 2, 4, 8, 16]
+1 4 16 64 256 
+<map object at 0x7feec216b9d0>
+
+[1, 4, 16, 64, 256]
 
 ```
 
+
+## Lambdas and the filter() function
+```
+1)
+from random import seed, randint
+
+seed()
+data = [randint(-10,10) for x in range(5)]
+filtered = list(filter(lambda x: x > 0 and x % 2 == 0, data))
+
+print(data)
+print(filtered)
+
+//o/p
+[9, -4, 6, 0, 7]
+[6]
+
+
+2)
+from random import seed, randint
+
+seed()
+data = [randint(-10,10) for x in range(5)]
+filtered = list(filter(lambda x: x > 0 and x % 2 == 0, data))
+
+print(data)
+print(filtered)
+print()
+print(filter(lambda x: x > 0 and x % 2 == 0, data))
+
+//o/p
+[-9, 5, -5, 10, -1]
+[10]
+
+<filter object at 0x7fc1b1783ed0>
+
+```
 
 
