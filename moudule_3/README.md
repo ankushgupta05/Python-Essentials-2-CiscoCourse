@@ -349,7 +349,7 @@ class Right:
         return "Right"
 
 
-class Sub(Left, Right):
+class Sub(Left, Right):   # first priority to the 'Left' and second priority to 'Right'  
     pass
 
 
@@ -359,5 +359,16 @@ print(obj.var, obj.var_left, obj.var_right, obj.fun())
 
 //o/p
 L LL RR Left
+
+//NOTE :-
+Python MRO (Method Resolution Order):
+Python looks for attributes and methods in the following order: Sub → Left → Right → object
+
+so that
+obj.var       # Found in Left.var = "L" ✅ (because Left comes first in MRO)
+obj.var_left  # Found in Left.var_left = "LL" ✅
+obj.var_right # Not in Left, found in Right.var_right = "RR" ✅
+obj.fun()     # Left.fun() is chosen because Left comes before Right in MRO ✅
+
 ```
 
