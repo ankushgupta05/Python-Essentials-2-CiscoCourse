@@ -597,7 +597,62 @@ class LowlandDog(SheepDog):
 
 
 
+## 3.6 Quize
+```
+1)
+import math
+ 
+    try:
+        print(math.sqrt(9))
+    except ValueError:
+        print("inf")
+    else:
+        print("fine")
+ //o/p
+3.0
+fine
 
+
+2)
+Question 2: What is the expected output of the following code?
+
+import math
+ 
+    try:
+        print(math.sqrt(-9))
+    except ValueError:
+        print("inf")
+    else:
+        print("fine")
+    finally:
+        print("the end")
+
+//o/p
+inf
+the end
+
+
+
+
+3)
+Question 3: What is the expected output of the following code?
+
+import math
+ 
+class NewValueError(ValueError):
+    def __init__(self, name, color, state):
+        self.data = (name, color, state)
+ 
+try:
+    raise NewValueError("Enemy warning", "Red alert", "High readiness")
+except NewValueError as nve:
+    for arg in nve.args:
+        print(arg, end='! ')
+
+//o/p
+Enemy warning! Red alert! High readiness!
+
+```
 
 
 
