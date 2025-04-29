@@ -306,3 +306,112 @@ print(stars("And Now for Something Completely Different"))
 And*Now*for*Something*Completely*Different
 
 ```
+
+
+
+
+## Module 4.4 is entire remaining
+
+
+
+## Module 4 Test - Questions and Answers
+
+### Question 1
+**Q:** What keyword would you use to define an anonymous function?
+**A:** `lambda`
+
+---
+
+### Question 2
+**Q:** Select the true statements. (Select two answers)
+**A:**
+- The lambda function can evaluate only one expression
+- The lambda function can accept any number of arguments
+
+---
+
+### Question 3
+**Q:** What code outputs (1, 4, 27)?
+**A:** `foo = tuple(map(lambda x: x**x, my_list))`
+
+---
+
+### Question 4
+**Q:** What code outputs [2, 3, 4, 5, 6]?
+**A:** `foo = list(filter(lambda x: x-0 and x-1, my_tuple))`
+
+---
+
+### Question 5
+**Q:** What is printed by the generator I()?
+**A:** `ace`
+
+---
+
+### Question 6
+**Q:** What does `fun(2)` yield?
+**A:** `++`
+
+---
+
+### Question 7
+**Q:** What is printed by the closures `r()` and `s()`?
+**A:** `***`
+
+---
+
+### Question 8
+**Q:** Which open modes allow read operations? (Select two)
+**A:**
+- `r`
+- `r+`
+
+---
+
+### Question 9
+**Q:** What does `errno.EEXIST` represent?
+**A:** File exists
+
+---
+
+### Question 10
+**Q:** What is printed by `bytearray(3)`?
+**A:** `bytearray(b'\x00\x00\x00')`
+
+---
+
+### Question 11
+**Q:** What is printed after navigating back from `thumbnails`?
+**A:** It prints the path to the pictures directory
+
+---
+
+### Question 12
+**Q:** What is printed after creating 'small', 'medium', 'large' directories?
+**A:** `['large', 'small', 'medium']`
+
+---
+
+### Question 13
+**Q:** What is the result of `date_1 - date_2`?
+**A:** `345 days, 0:00:00`
+
+---
+
+### Question 14
+**Q:** What is the result of the strftime call?
+**A:** `19/November/27 11:27:22`
+
+---
+
+### Question 15
+**Q:** Which program produces: Mo Tu We Th Fr Sa Su?
+**A:** A
+
+---
+
+### Question 16
+**Q:** What is the result of `c.iterweekdays()`?
+**A:** `0 1 2 3 4 5 6`
+
+
