@@ -402,10 +402,110 @@ do_it from Two
 
 
 
+##  What is Method Resolution Order (MRO) and why is it that not all inheritances make sense?
+
+```
+1)
+# ✔️ Yeh perfectly valid hai. Inheritance chain: Bottom → Middle → Top
+
+class Top:
+    def m_top(self):
+        print("top")
+
+class Middle(Top):  # Middle inherits from Top
+    def m_middle(self):
+        print("middle")
+
+class Bottom(Middle):  # Bottom inherits from Middle
+    def m_bottom(self):
+        print("bottom")
+
+# Object of Bottom can access all 3 methods
+object = Bottom()
+object.m_bottom()   # Output: bottom
+object.m_middle()   # Output: middle
+object.m_top()      # Output: top
+
+
+//o/p
+bottom
+middle
+top
 
 
 
 
+
+2)
+# ✔️ Yeh bhi valid hai. Although Middle already inherits Top,
+#      phir bhi humne Bottom me Top ko dobara likh diya hai.
+# Python internally duplicate se bachata hai using MRO.
+
+class Top:
+    def m_top(self):
+        print("top")
+
+class Middle(Top):  # Middle inherits Top
+    def m_middle(self):
+        print("middle")
+
+class Bottom(Middle, Top):  # Redundant: Middle already has Top
+    def m_bottom(self):
+        print("bottom")
+
+# Object of Bottom can still access all methods
+object = Bottom()
+object.m_bottom()   # Output: bottom
+object.m_middle()   # Output: middle
+object.m_top()      # Output: top
+
+//o/p
+bottom
+middle
+top
+
+
+
+
+
+3)
+# ❌ Yeh chalega nahi.
+# Problem: Middle already inherits Top, lekin humne Bottom me Top ko pehle likh diya.
+# Python ko confusion hota hai Top class ke order ko resolve karne me.
+
+class Top:
+    def m_top(self):
+        print("top")
+
+class Middle(Top):  # Middle inherits Top
+    def m_middle(self):
+        print("middle")
+
+# ❌ ERROR: Inconsistent Method Resolution Order (MRO)
+class Bottom(Top, Middle):  # Wrong order: Top first, Middle later (but Middle also inherits Top)
+    def m_bottom(self):
+        print("bottom")
+
+# This will not run
+object = Bottom()
+object.m_bottom()
+object.m_middle()
+object.m_top()
+
+//o/p
+TypeError: Cannot create a consistent method resolution
+order (MRO) for bases Top, Middle
+
+
+
+
+//NOTE for 1 and 2 and 3
+| Case | Code Snippet                  | Runs? | Reason                                                                 |
+|------|-------------------------------|-------|------------------------------------------------------------------------|
+| 1    | `class Bottom(Middle)`        | ✅ Yes | Simple single inheritance; clear MRO                                   |
+| 2    | `class Bottom(Middle, Top)`   | ✅ Yes | Redundant but Python resolves with MRO                                 |
+| 3    | `class Bottom(Top, Middle)`   | ❌ No  | MRO conflict due to `Top` appearing before and inside `Middle` as well |
+```
 
 
 
