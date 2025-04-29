@@ -508,6 +508,15 @@ order (MRO) for bases Top, Middle
 ```
 
 
+## MRO RULE 
+| Rule                              | Explanation                                     |
+|-----------------------------------|-------------------------------------------------|
+| C3 Linearization                  | Python 3 ka MRO algorithm                       |
+| Left-to-right lookup              | `class A(B, C)` → B checked before C            |
+| No duplication in MRO             | Har class ek hi baar MRO me aata hai            |
+| Parents appear **after** children | Parent class child ke baad hi aayega            |
+
+
 
 
 
