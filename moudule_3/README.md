@@ -224,6 +224,60 @@ print(obj)
 # super().__init__(...) = dynamic, flexible, recommended in Python 3+
 # Multiple inheritance me super() zyada useful hota hai.
 
+
+
+
+
+
+3)
+# Testing properties: class variables.
+class Super:
+    supVar = 1
+
+
+class Sub(Super):
+    subVar = 2
+
+
+obj = Sub()
+
+print(obj.subVar)
+print(obj.supVar)
+
+//o/p
+2
+1
+
+
+
+4)
+# Testing properties: instance variables.
+class Super:
+    def __init__(self):
+        self.supVar = 11
+
+
+class Sub(Super):
+    def __init__(self):
+        super().__init__()
+        self.subVar = 12
+
+
+obj = Sub()
+
+print(obj.subVar)
+print(obj.supVar)
+
+//o/p
+12
+11
+
+
+
+5)
+
+
+
 ```
 
 
