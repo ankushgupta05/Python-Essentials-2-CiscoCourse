@@ -151,4 +151,80 @@ False
 True
 1 2 1
 True False
+
+
+
 ```
+
+
+## imp prog.
+```
+
+1)
+# Base class
+class Super:
+    def __init__(self, name):
+        self.name = name  # name attribute set kar raha hai
+
+    def __str__(self):
+        return "My name is " + self.name + "."  # print(obj) pe yeh call hoga
+
+
+# Derived class (child class)
+class Sub(Super):
+    def __init__(self, name):
+        # 👇 Base class ka constructor ko explicitly call kar rahe hain
+        Super.__init__(self, name)  # Python 2 style, kam flexible
+
+# Object banaya
+obj = Sub("Andy")
+
+# print(obj) => __str__ method call karega
+print(obj)
+
+// o/p
+# Output: My name is Andy.
+
+
+
+
+
+2)
+# Base class
+class Super:
+    def __init__(self, name):
+        self.name = name  # name attribute set kar raha hai
+
+    def __str__(self):
+        return "My name is " + self.name + "."  # print(obj) pe yeh call hoga
+
+
+# Derived class (child class)
+class Sub(Super):
+    def __init__(self, name):
+        # 👇 Parent constructor ko super() se call kar rahe hain
+        super().__init__(name)  # ✅ Python 3 style, dynamic and safer
+
+# Object banaya
+obj = Sub("Andy")
+
+# print(obj) => __str__ method call karega
+print(obj)
+
+//o/p
+# Output: My name is Andy
+
+
+
+
+
+// Note for quesion 1 and 2 :
+# Dono version me output same hai, lekin:
+# Super.__init__(...) = explicit, hard-coded base class
+# super().__init__(...) = dynamic, flexible, recommended in Python 3+
+# Multiple inheritance me super() zyada useful hota hai.
+
+```
+
+
+
