@@ -346,3 +346,28 @@ Sample output:
 No
 
 
+
+// code 
+
+def func1(matrix = []):
+
+    row_sum_1st = sum(matrix[0])
+    for row in matrix:
+        if sum(row) != row_sum_1st:
+            return False
+
+    else:
+        temp = 0
+        for i in range(len(matrix)):
+            for row in matrix:
+                temp += row[i]
+            
+            if temp != row_sum_1st:
+                return False
+            print(temp , row_sum_1st)
+            temp = 0
+
+        return True
+// above code wrong hai please explore this
+
+
