@@ -256,5 +256,43 @@ else:
 
 
 
+
+
+
+
+
 ## for below code IMP Notes
+
+NOTE :- IMP CODE
+```
+//input below code for both 1 and 2
+295743861
+431865927
+876192543
+387459216
+612387495
+549216738
+763524189
+928671354
+154938672
+
+1)
+print([list(map(int, input().split())) for _ in range(9)])
+//o/p
+[[295743861], [431865927], [876192543], [387459216], [612387495], [549216738], [763524189], [928671354], [154938672]]
+
+
+2)
+sudoku = [list(map(int, input().strip())) for _ in range(9)]
+
+//o/p
+[[2, 9, 5, 7, 4, 3, 8, 6, 1], [4, 3, 1, 8, 6, 5, 9, 2, 7], [8, 7, 6, 1, 9, 2, 5, 4, 3], [3, 8, 7, 4, 5, 9, 2, 1, 6], [6, 1, 2, 3, 8, 7, 4, 9, 5], [5, 4, 9, 2, 1, 6, 7, 3, 8], [7, 6, 3, 5, 2, 4, 1, 8, 9], [9, 2, 8, 6, 7, 1, 3, 5, 4], [1, 5, 4, 9, 3, 8, 6, 7, 2]]
+
+```
+| Aspect                 | Your Code (`split()`)                                       | My Code (`strip()`)                                     |
+| ---------------------- | ----------------------------------------------------------- | ------------------------------------------------------- |
+| **Input format**       | Expects **space-separated digits** like `2 9 5 7 4 3 8 6 1` | Expects **continuous digits** like `295743861`          |
+| **How input is split** | Uses `input().split()` → splits on spaces                   | Uses `input().strip()` → treats each character as digit |
+| **Fails if input is**  | `295743861` (will give just 1 number, not 9)                | `2 9 5 7 4 3 8 6 1` (will raise ValueError)             |
+| **Common use**         | Used when user gives digits **with spaces**                 | Used when user gives digits **without spaces**          |
 
