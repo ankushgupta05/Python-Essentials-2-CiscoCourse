@@ -139,7 +139,7 @@ else:
 
 
 
-4)
+Q 4)
 2.5.9   LAB   The Digit of Life
 Some say that the Digit of Life is a digit evaluated using somebody's birthday. It's simple – you just need to sum all the digits of the date. If the result contains more than one digit, you have to repeat the addition until you get exactly one digit. For example:
 
@@ -198,3 +198,58 @@ x = int(input())
 print(sum_digits(sum_digits(x)))
 
 
+
+
+
+
+
+
+Q 5)
+2.5.10   LAB   Find a word!
+Let's play a game. We will give you two strings: one being a word (e.g., "dog") and the second being a combination of any characters.
+
+Your task is to write a program which answers the following question: are the characters comprising the first string hidden inside the second string?
+
+For example:
+
+if the second string is given as "vcxzxduybfdsobywuefgas", the answer is yes;
+if the second string is "vcxzxdcybfdstbywuefsas", the answer is no (as the letters "d", "o", or "g" don't appear in this order)
+Hints:
+
+you should use the two-argument variants of the pos() functions inside your code;
+don't worry about case sensitivity.
+Test your code using the data we've provided.
+
+Test Data
+#1
+Sample input:
+donor
+Nabucodonosor
+
+Sample output:
+Yes
+
+#2
+Sample input:
+donut
+Nabucodonosor
+
+Sample output:
+No
+
+
+
+// code
+s1 =input()
+s2 = input()
+temp = []
+start = 0
+for index,val  in enumerate(s1):
+    res=s2.find(val,start,len(s2))
+    if res != -1 :
+        start = index
+    temp.append(res)
+if (-1) in temp and (sorted(temp) != temp):
+    print("NO") 
+else:
+    print("YES")
