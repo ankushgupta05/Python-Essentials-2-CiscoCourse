@@ -42,7 +42,7 @@ print(''.join(res))
 
 
 
-2)
+Q 2)
 2.5.7   LAB   Palindromes
 Do you know what a palindrome is?
 
@@ -85,4 +85,55 @@ else:
     print('Its \'not a palindrome')
 
 
- 
+
+
+
+
+
+Q 3)
+2.5.8   LAB   Anagrams
+An anagram is a new word formed by rearranging the letters of a word, using all the original letters exactly once. For example, the phrases "rail safety" and "fairy tales" are anagrams, while "I am" and "You are" are not.
+
+Your task is to write a program which:
+
+asks the user for two separate texts;
+checks whether, the entered texts are anagrams and prints the result.
+Note:
+
+assume that two empty strings are not anagrams;
+treat upper- and lower-case letters as equal;
+spaces are not taken into account during the check – treat them as non-existent
+Test your code using the data we've provided.
+
+Test Data
+#1
+Sample input:
+Listen
+Silent
+
+Sample output:
+Anagrams
+
+#2
+Sample input:
+modern
+norman
+
+Sample output:
+Not anagrams
+
+
+// code
+s1 = input().replace(" ","").lower()
+s2 = input().replace(" ","").lower()
+index = 0
+for i in s1:
+    if (i not in s2):
+        index = 1
+        break;
+    
+else:
+    print('Anagrams',end=' ')
+
+
+
