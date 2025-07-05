@@ -1,12 +1,22 @@
 ##imp 
 ```
 
-def are_anagrams(s1, s2):
-    if len(s1) != len(s2):
-        return False
+class Solution:
     from collections import Counter
-    return Counter(s1) == Counter(s2)
+    def areAnagrams(self, s1, s2):
+       # code here
+        print(self.Counter(s1),self.Counter(s2))
+        print(self.Counter(s1)==self.Counter(s2))
+       
+test = Solution()
+s1 = "geek"
+s2 = "keeg"
+test.areAnagrams(s1,s2)
 
+
+# // o/p
+# Counter({'e': 2, 'g': 1, 'k': 1}) Counter({'e': 2, 'k': 1, 'g': 1})
+# True
 
 
 ```
