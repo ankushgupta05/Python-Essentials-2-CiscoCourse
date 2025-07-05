@@ -1,3 +1,24 @@
+##imp 
+```
+
+def are_anagrams(s1, s2):
+    if len(s1) != len(s2):
+        return False
+    from collections import Counter
+    return Counter(s1) == Counter(s2)
+
+
+
+```
+
+
+
+
+
+
+
+
+
 # 🐍 Python Inbuilt Functions & Methods Cheat Sheet
 
 This document provides a categorized list of commonly used Python inbuilt functions and methods.
