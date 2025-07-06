@@ -1,3 +1,76 @@
+
+
+###IMP
+```
+
+Sure! Here's a short summary with a program to help you understand lexicographical order easily:
+
+
+---
+
+✅ Lexicographical Order (Summary with Program)
+
+Lexicographical order means dictionary-style sorting.
+
+It compares strings character by character.
+
+Shorter strings come first if one is a prefix of the other.
+
+
+
+---
+
+📘 Example in Python:
+
+# List of words
+words = ["apple", "banana", "bat", "ball", "cat"]
+
+# Sort in lexicographical order
+sorted_words = sorted(words)
+
+# Output the result
+print("Lexicographical Order:")
+for word in sorted_words:
+    print(word)
+
+🖨️ Output:
+
+Lexicographical Order:
+apple
+ball
+banana
+bat
+cat
+
+
+---
+
+💡 Key Points:
+
+sorted() in Python automatically uses lexicographical order for strings.
+
+Works exactly like a dictionary sorts words.
+
+
+
+---
+
+Let me know if you want the same in C++ or Java!
+
+
+
+```
+
+
+
+
+
+
+
+
+
+
+
 ##imp 
 ```
 
