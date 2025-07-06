@@ -118,7 +118,7 @@ This document provides a categorized list of commonly used Python inbuilt functi
 | `remove(x)`       | Remove first occurrence of `x`             |
 | `pop([i])`        | Remove and return item at index `i`        |
 | `clear()`         | Remove all items from the list             |
-| `index(x)`        | Return index of first occurrence of `x`    |
+| `index(x)`        | Return index of first  occurrence of `x`  agar element nahi mila to error denga   |
 | `count(x)`        | Return number of times `x` appears         |
 | `sort()`          | Sort the list in ascending order           |
 | `reverse()`       | Reverse the list in-place                  |
